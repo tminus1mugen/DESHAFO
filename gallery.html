@@ -12,10 +12,7 @@
       }
       .gallery-card-tall .gallery-card-inner img { height: 280px; }
       .gallery-card-wide .gallery-card-inner img { height: 200px; }
-      .gallery-card-large .gallery-card-inner img { height: 340px; }
-      .gallery-card:not(.gallery-card-tall):not(.gallery-card-wide):not(.gallery-card-large) .gallery-card-inner img {
-        height: 220px;
-      }
+      .gallery-card:not(.gallery-card-tall):not(.gallery-card-wide) .gallery-card-inner img { height: 220px; }
       .lightbox-inner { max-height: 85vh; }
       .lightbox-img { max-height: 60vh; }
     }
@@ -23,168 +20,130 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
-<div class="navbar-wrapper">
-  <nav class="navbar">
-    <div class="nav-left"><a href="index.html">Home</a><a href="about.html">About</a><a href="programs.html">Programs</a><a href="gallery.html" class="active">Gallery</a></div>
-    <div class="nav-logo"><a href="index.html"><img src="assets/images/logo.png" alt="DESHAFO" /></a></div>
-    <div class="nav-right"><a href="contact.html">Contact</a><a href="donations.html">Donate</a></div>
-    <div class="nav-auth"><a href="login.html" class="btn-login">Login</a><a href="signup.html" class="btn-signup">Join Us</a></div>
-    <div class="hamburger"><span></span><span></span><span></span></div>
-  </nav>
-</div>
-<div class="mobile-nav">
-  <img src="assets/images/logo.png" alt="DESHAFO" class="mobile-nav-logo" />
-  <a href="index.html">Home</a><a href="about.html">About Us</a><a href="programs.html">Programs</a>
-  <a href="gallery.html">Gallery</a><a href="donations.html">Donate</a><a href="contact.html">Contact</a>
-</div>
-
-<!-- PAGE HEADER -->
-<div class="page-header">
-  <div class="container">
-    <span class="badge">Visual Stories</span>
-    <h1>Our Gallery</h1>
-    <p>Moments of joy, learning, and community — captured in time.</p>
+  <!-- NAVBAR -->
+  <div class="navbar-wrapper">
+    <nav class="navbar">
+      <div class="nav-left"><a href="index.html">Home</a><a href="about.html">About</a><a href="programs.html">Programs</a><a href="gallery.html" class="active">Gallery</a></div>
+      <div class="nav-logo"><a href="index.html"><img src="assets/images/logo.png" alt="DESHAFO" /></a></div>
+      <div class="nav-right"><a href="contact.html">Contact</a><a href="donations.html">Donate</a></div>
+      <div class="nav-auth"><a href="login.html" class="btn-login">Login</a><a href="signup.html" class="btn-signup">Join Us</a></div>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </nav>
   </div>
-</div>
+  <div class="mobile-nav">
+    <img src="assets/images/logo.png" alt="DESHAFO" class="mobile-nav-logo" />
+    <a href="index.html">Home</a><a href="about.html">About Us</a><a href="programs.html">Programs</a>
+    <a href="gallery.html">Gallery</a><a href="donations.html">Donate</a><a href="contact.html">Contact</a>
+  </div>
 
-<!-- GALLERY -->
-<section class="section-pad" style="background:var(--ivory);">
-  <div class="container">
-
-     <div class="gallery-grid reveal">
- 
-       <!-- 1. photo1.jpg - Tall -->
-       <div class="gallery-card gallery-card-tall" onclick="openLightbox('photo1','Education')">
-         <div class="gallery-card-inner">
-           <img src="assets/images/photo1.jpg" alt="Education" loading="lazy" />
-         </div>
-       </div>
- 
-       <!-- 2. mentorship.jpeg - Regular -->
-       <div class="gallery-card" onclick="openLightbox('mentorship1','Mentorship')">
-         <div class="gallery-card-inner">
-           <img src="assets/images/mentorship.jpeg" alt="Mentorship" loading="lazy" />
-         </div>
-       </div>
- 
-       <!-- 3. mentorship2.jpg - Regular -->
-       <div class="gallery-card" onclick="openLightbox('mentorship2','Mentorship')">
-         <div class="gallery-card-inner">
-           <img src="assets/images/mentorship2.jpg" alt="Mentorship" loading="lazy" />
-         </div>
-       </div>
- 
-       <!-- 4. community.jpg - Wide -->
-       <div class="gallery-card gallery-card-wide" onclick="openLightbox('community1','Community')">
-         <div class="gallery-card-inner">
-           <img src="assets/images/community.jpg" alt="Community" loading="lazy" />
-         </div>
-       </div>
- 
-       <!-- 5. climate action.jpeg - Regular -->
-       <div class="gallery-card" onclick="openLightbox('climate1','Climate Action')">
-         <div class="gallery-card-inner">
-           <img src="assets/images/climate action.jpeg" alt="Climate Action" loading="lazy" />
-         </div>
-       </div>
- 
-       <!-- 6. mentorship3.jpg - Regular -->
-       <div class="gallery-card" onclick="openLightbox('mentorship3','Mentorship')">
-         <div class="gallery-card-inner">
-           <img src="assets/images/mentorship3.jpg" alt="Mentorship" loading="lazy" />
-         </div>
-       </div>
- 
-       <!-- 7. photo3.jpg - Large -->
-       <div class="gallery-card gallery-card-large" onclick="openLightbox('event1','Youth Event')">
-         <div class="gallery-card-inner">
-           <img src="assets/images/photo3.jpg" alt="Youth Event" loading="lazy" />
-         </div>
-       </div>
- 
-       <!-- 8. mentorship4.jpg - Regular -->
-       <div class="gallery-card" onclick="openLightbox('mentorship4','Mentorship')">
-         <div class="gallery-card-inner">
-           <img src="assets/images/mentorship4.jpg" alt="Mentorship" loading="lazy" />
-         </div>
-       </div>
- 
-       <!-- 9. mentorship5.jpg - Regular -->
-       <div class="gallery-card" onclick="openLightbox('mentorship5','Mentorship')">
-         <div class="gallery-card-inner">
-           <img src="assets/images/mentorship5.jpg" alt="Mentorship" loading="lazy" />
-         </div>
-       </div>
- 
-       <!-- 10. photo2.jpg - Tall -->
-       <div class="gallery-card gallery-card-tall" onclick="openLightbox('photo2','Community Outreach')">
-         <div class="gallery-card-inner">
-           <img src="assets/images/photo2.jpg" alt="Community Outreach" loading="lazy" />
-         </div>
-       </div>
- 
-       <!-- 11. mentorship6.jpg - Tall -->
-       <div class="gallery-card gallery-card-tall" onclick="openLightbox('mentorship6','Mentorship')">
-         <div class="gallery-card-inner">
-           <img src="assets/images/mentorship6.jpg" alt="Mentorship" loading="lazy" />
-         </div>
-       </div>
- 
-     </div>
-
-    <div style="text-align:center;margin-top:64px;" class="reveal">
-      <p style="font-size:1.1rem;color:var(--text-muted);margin-bottom:24px;">These moments are made possible by generous supporters like you.</p>
-      <a href="donations.html" class="btn btn-gold">Help Create More Moments →</a>
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <span class="badge">Visual Stories</span>
+      <h1>Our Gallery</h1>
+      <p>Moments of joy, learning, and community — captured in time.</p>
     </div>
-
   </div>
-</section>
 
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" onclick="closeLightbox()">×</button>
-  <div class="lightbox-inner">
-    <img src="" alt="" class="lightbox-img" id="lb-img" />
-  </div>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand"><img src="assets/images/logo.png" alt="DESHAFO" style="width:72px;border-radius:50%;border:2px solid var(--gold);" /><p>DESHAFO Integrated CBO — DEstiny SHApers FOundation. Empowering children, youth, and women in Homabay County, Kenya since 2019.</p><div class="social-links"><a href="https://www.facebook.com/iddyrolex" target="_blank">f</a><a href="https://www.linkedin.com/in/rolex-ong-ute" target="_blank">in</a></div></div>
-      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="founder.html">Our Founder</a></li><li><a href="programs.html">Programs</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
-      <div class="footer-col"><h4>Programs</h4><ul><li><a href="programs.html">Education &amp; Mentorship</a></li><li><a href="programs.html">Teen Mother Support</a></li><li><a href="programs.html">GRETECHI Conference</a></li><li><a href="programs.html">Climate Action</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><p>Outbram Village, Central Ward, Homabay Town Sub-county, Homabay County, Kenya</p></div></div>
+  <!-- GALLERY -->
+  <section class="section-pad" style="background:var(--ivory);">
+    <div class="container">
+      <div class="gallery-grid reveal">
+        <div class="gallery-card gallery-card-tall" onclick="openLightbox('photo1','Education')">
+          <div class="gallery-card-inner">
+            <img src="assets/images/photo1.jpg" alt="Education" loading="lazy" />
+          </div>
+        </div>
+        <div class="gallery-card" onclick="openLightbox('mentorship1','Mentorship')">
+          <div class="gallery-card-inner">
+            <img src="assets/images/mentorship.jpeg" alt="Mentorship" loading="lazy" />
+          </div>
+        </div>
+        <div class="gallery-card" onclick="openLightbox('mentorship2','Mentorship')">
+          <div class="gallery-card-inner">
+            <img src="assets/images/mentorship2.jpg" alt="Mentorship" loading="lazy" />
+          </div>
+        </div>
+        <div class="gallery-card gallery-card-wide" onclick="openLightbox('community1','Community')">
+          <div class="gallery-card-inner">
+            <img src="assets/images/community.jpg" alt="Community" loading="lazy" />
+          </div>
+        </div>
+        <div class="gallery-card" onclick="openLightbox('climate1','Climate Action')">
+          <div class="gallery-card-inner">
+            <img src="assets/images/climate%20action.jpeg" alt="Climate Action" loading="lazy" />
+          </div>
+        </div>
+        <div class="gallery-card" onclick="openLightbox('mentorship3','Mentorship')">
+          <div class="gallery-card-inner">
+            <img src="assets/images/mentorship3.jpg" alt="Mentorship" loading="lazy" />
+          </div>
+        </div>
+        <div class="gallery-card" onclick="openLightbox('mentorship4','Mentorship')">
+          <div class="gallery-card-inner">
+            <img src="assets/images/mentorship4.jpg" alt="Mentorship" loading="lazy" />
+          </div>
+        </div>
+        <div class="gallery-card" onclick="openLightbox('mentorship5','Mentorship')">
+          <div class="gallery-card-inner">
+            <img src="assets/images/mentorship5.jpg" alt="Mentorship" loading="lazy" />
+          </div>
+        </div>
+        <div class="gallery-card gallery-card-tall" onclick="openLightbox('mentorship6','Mentorship')">
+          <div class="gallery-card-inner">
+            <img src="assets/images/mentorship6.jpg" alt="Mentorship" loading="lazy" />
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:64px;" class="reveal">
+        <p style="font-size:1.1rem;color:var(--text-muted);margin-bottom:24px;">These moments are made possible by generous supporters like you.</p>
+        <a href="donations.html" class="btn btn-gold">Help Create More Moments →</a>
+      </div>
     </div>
-    <div class="footer-bottom"><p>© 2025 <span>DESHAFO Integrated CBO</span>. All rights reserved.</p><p>Built with <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="flex-shrink:0;vertical-align:middle;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> for community impact.</p></div>
-  </div>
-</footer>
+  </section>
 
-<script src="js/main.js"></script>
-   <script>
-   function openLightbox(id, title) {
-     const lb = document.getElementById('lightbox');
-     const img = document.getElementById('lb-img');
-     const imageMap = {
-       'photo1': 'assets/images/photo1.jpg',
-       'mentorship1': 'assets/images/mentorship.jpeg',
-       'mentorship2': 'assets/images/mentorship2.jpg',
-       'community1': 'assets/images/community.jpg',
-       'climate1': 'assets/images/climate action.jpeg',
-       'mentorship3': 'assets/images/mentorship3.jpg',
-       'event1': 'assets/images/photo3.jpg',
-       'mentorship4': 'assets/images/mentorship4.jpg',
-       'mentorship5': 'assets/images/mentorship5.jpg',
-       'photo2': 'assets/images/photo2.jpg',
-       'mentorship6': 'assets/images/mentorship6.jpg'
-     };
-     img.src = imageMap[id] || 'assets/images/photo1.jpg';
-     img.alt = title;
-     lb.classList.add('open');
-     document.body.style.overflow = 'hidden';
-   }
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <div class="lightbox-inner">
+      <img src="" alt="" class="lightbox-img" id="lb-img" />
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><img src="assets/images/logo.png" alt="DESHAFO" style="width:72px;border-radius:50%;border:2px solid var(--gold);" /><p>DESHAFO Integrated CBO — DEstiny SHApers FOundation. Empowering children, youth, and women in Homabay County, Kenya since 2019.</p><div class="social-links"><a href="https://www.facebook.com/iddyrolex" target="_blank">f</a><a href="https://www.linkedin.com/in/rolex-ong-ute" target="_blank">in</a></div></div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="founder.html">Our Founder</a></li><li><a href="programs.html">Programs</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
+        <div class="footer-col"><h4>Programs</h4><ul><li><a href="programs.html">Education &amp; Mentorship</a></li><li><a href="programs.html">Teen Mother Support</a></li><li><a href="programs.html">GRETECHI Conference</a></li><li><a href="programs.html">Climate Action</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><p>Outbram Village, Central Ward, Homabay Town Sub-county, Homabay County, Kenya</p></div></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 <span>DESHAFO Integrated CBO</span>. All rights reserved.</p><p>Built with <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="flex-shrink:0;vertical-align:middle;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> for community impact.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+  function openLightbox(id, title) {
+    const lb = document.getElementById('lightbox');
+    const img = document.getElementById('lb-img');
+    const imageMap = {
+      'photo1': 'assets/images/photo1.jpg',
+      'mentorship1': 'assets/images/mentorship.jpeg',
+      'mentorship2': 'assets/images/mentorship2.jpg',
+      'community1': 'assets/images/community.jpg',
+      'climate1': 'assets/images/climate%20action.jpeg',
+      'mentorship3': 'assets/images/mentorship3.jpg',
+      'mentorship4': 'assets/images/mentorship4.jpg',
+      'mentorship5': 'assets/images/mentorship5.jpg',
+      'mentorship6': 'assets/images/mentorship6.jpg'
+    };
+    img.src = imageMap[id] || 'assets/images/photo1.jpg';
+    img.alt = title;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
 
   function closeLightbox() {
     document.getElementById('lightbox').classList.remove('open');
@@ -198,6 +157,6 @@
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeLightbox();
   });
-</script>
+  </script>
 </body>
 </html>
