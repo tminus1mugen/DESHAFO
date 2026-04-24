@@ -4,95 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Programs — DESHAFO Integrated CBO</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=20250425" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <style>
-    .program-full {
-      display:grid;grid-template-columns:1fr 1.6fr;gap:64px;align-items:center;
-      padding:80px 0;border-bottom:1.5px solid rgba(15,106,60,0.1);
-    }
-    .program-full:nth-child(even) { direction:rtl; }
-    .program-full:nth-child(even) > * { direction:ltr; }
-    .program-full:last-child { border-bottom:none; }
-
-    /* Mobile responsive */
-    @media (max-width: 768px) {
-      .program-full {
-        grid-template-columns: 1fr !important;
-        gap: 40px !important;
-        padding: 60px 0 !important;
-      }
-      .program-full:nth-child(even) {
-        direction: ltr !important;
-      }
-      .program-icon-block {
-        max-width: 280px !important;
-        margin: 0 auto;
-      }
-      .program-detail {
-        text-align: left;
-      }
-      .program-detail ul li {
-        font-size: 0.95rem !important;
-      }
-      .section-pad {
-        padding: 60px 0 !important;
-      }
-    }
-    .program-icon-block {
-      aspect-ratio:1;
-      max-width:380px;
-      width:100%;
-      border-radius:var(--radius-lg);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:6rem;
-      box-shadow:var(--shadow-md);
-    }
-    .program-icon-block i,
-    .program-icon-block svg {
-      transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
-    }
-    .program-icon-block:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 50px rgba(15,106,45,0.2);
-    }
-    .program-icon-block:hover i,
-    .program-icon-block:hover svg {
-      transform: scale(1.15);
-    }
-    .program-icon-block i {
-      transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
-    }
-    .program-icon-block:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 50px rgba(15,106,45,0.2);
-    }
-    .program-icon-block:hover i {
-      transform: scale(1.15);
-    }
-    .program-icon-block svg {
-      transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
-      width: 65%;max-width:220px;height:auto;
-    }
-    .program-icon-block:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 50px rgba(15,106,45,0.2);
-    }
-    .program-icon-block:hover svg {
-      transform: scale(1.15);
-    }
-    .program-detail .badge { background:var(--gold-pale);color:var(--brown);border-color:var(--gold); }
-    .program-detail h2 { margin:12px 0 20px; }
-    .program-detail ul { list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:16px; }
-    .program-detail ul li { display:flex;gap:10px;align-items:flex-start;font-size:0.95rem;color:var(--text-muted); }
-    .program-detail ul li::before { content:'✓';color:var(--green);font-weight:700;min-width:16px; }
-     @media(max-width:768px) {
-       .program-full { grid-template-columns:1fr;direction:ltr; }
-       .program-icon-block { max-width:100%;aspect-ratio:1; }
-     }
-  </style>
 </head>
 <body>
 
@@ -122,10 +35,10 @@
 </div>
 
 <!-- PROGRAMS -->
-<section style="background:var(--ivory);padding:60px 0 100px;">
+<section class="section-pad" style="background:var(--ivory);padding:60px 0 100px;">
   <div class="container">
 
-     <!-- 1 Education -->
+     <!-- 1 Education & Mentorship -->
      <div class="program-full reveal">
        <div class="program-icon-block" style="background:linear-gradient(135deg,#e8f5ee,#a8dbc0);">
          <i class="fas fa-graduation-cap" style="font-size:10rem;color:var(--green);"></i>
@@ -144,7 +57,7 @@
       </div>
     </div>
 
-     <!-- 2 Teen Mothers -->
+     <!-- 2 Teen Mother Support -->
      <div class="program-full reveal">
        <div class="program-icon-block" style="background:linear-gradient(135deg,#fff3e0,#ffcc80);">
          <i class="fas fa-hand-holding-heart" style="font-size:10rem;color:var(--orange);"></i>
@@ -163,7 +76,7 @@
       </div>
     </div>
 
-     <!-- 3 GRETECHI -->
+     <!-- 3 GRETECHI Conference -->
      <div class="program-full reveal">
        <div class="program-icon-block" style="background:linear-gradient(135deg,#e3f2fd,#90caf9);">
          <i class="fas fa-users" style="font-size:10rem;color:var(--blue);"></i>
@@ -202,7 +115,7 @@
       </div>
     </div>
 
-     <!-- 5 Community Reach -->
+     <!-- 5 Community Reach & Leadership -->
      <div class="program-full reveal">
        <div class="program-icon-block" style="background:linear-gradient(135deg,#fce4ec,#f48fb1);">
          <i class="fas fa-user-friends" style="font-size:10rem;color:var(--brown);"></i>
@@ -246,6 +159,101 @@
     <div class="footer-bottom"><p>© 2025 <span>DESHAFO Integrated CBO</span>. All rights reserved.</p><p>Built with <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="flex-shrink:0;vertical-align:middle;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> for community impact.</p></div>
   </div>
 </footer>
+
 <script src="js/main.js"></script>
+<style>
+  .program-full {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 64px;
+    align-items: center;
+    padding: 80px 0;
+    border-bottom: 1.5px solid rgba(15,106,60,0.1);
+  }
+  .program-full:nth-child(even) { direction: rtl; }
+  .program-full:nth-child(even) > * { direction: ltr; }
+  .program-full:last-child { border-bottom: none; }
+
+  .program-icon-block {
+    aspect-ratio: 1;
+    max-width: 380px;
+    width: 100%;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+  .program-icon-block i,
+  .program-icon-block svg {
+    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+    width: 70%;
+    max-width: 220px;
+    height: auto;
+  }
+  .program-icon-block:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(15,106,60,0.2);
+  }
+  .program-icon-block:hover i,
+  .program-icon-block:hover svg {
+    transform: scale(1.15);
+  }
+
+  .program-detail .badge {
+    background: var(--gold-pale);
+    color: var(--brown);
+    border-color: var(--gold);
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+  .program-detail h2 {
+    margin: 12px 0 20px;
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    line-height: 1.2;
+  }
+  .program-detail p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  .program-detail ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .program-detail ul li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+  .program-detail ul li::before {
+    content: '✓';
+    color: var(--green);
+    font-weight: 700;
+    min-width: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .program-full {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+      padding: 60px 0 !important;
+    }
+    .program-full:nth-child(even) { direction: ltr !important; }
+    .program-icon-block {
+      max-width: 100% !important;
+      aspect-ratio: 1 !important;
+    }
+    .program-detail { text-align: left; }
+  }
+</style>
 </body>
 </html>
