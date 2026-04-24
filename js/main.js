@@ -206,13 +206,17 @@ function initPasswordToggles() {
 function initOrbit() {
   const el = document.getElementById('orbitVisual');
   if (!el || el._orbit) return;
+  // Disable orbit on mobile (screen width <= 768px) or if element is hidden
+  if (window.innerWidth <= 768 || el.offsetWidth === 0 || el.offsetHeight === 0) return;
   el._orbit = true;
   const nodes = Array.from(el.querySelectorAll('.orbit-node'));
   if (!nodes.length) return;
   let angle = -Math.PI / 2, paused = false;
   const RADIUS = 196, SPEED = 0.007;
   const tick = () => {
-    if (!el.isConnected) return; // stop if navigated away
+    if (!el.isConnected) return;
+    // Stop if element becomes hidden or window resized to mobile
+    if (window.innerWidth <= 768 || el.offsetWidth === 0 || el.offsetHeight === 0) return;
     if (!paused) angle += SPEED;
     const cx = el.offsetWidth / 2, cy = el.offsetHeight / 2;
     nodes.forEach((n, i) => {

@@ -14,6 +14,31 @@
     .program-full:nth-child(even) { direction:rtl; }
     .program-full:nth-child(even) > * { direction:ltr; }
     .program-full:last-child { border-bottom:none; }
+
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+      .program-full {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+        padding: 60px 0 !important;
+      }
+      .program-full:nth-child(even) {
+        direction: ltr !important;
+      }
+      .program-icon-block {
+        max-width: 280px !important;
+        margin: 0 auto;
+      }
+      .program-detail {
+        text-align: left;
+      }
+      .program-detail ul li {
+        font-size: 0.95rem !important;
+      }
+      .section-pad {
+        padding: 60px 0 !important;
+      }
+    }
     .program-icon-block {
       aspect-ratio:1;
       max-width:380px;
@@ -180,7 +205,7 @@
      <!-- 5 Community Reach -->
      <div class="program-full reveal">
        <div class="program-icon-block" style="background:linear-gradient(135deg,#fce4ec,#f48fb1);">
-         <i class="fas fa-heart" style="font-size:10rem;color:var(--brown);"></i>
+         <i class="fas fa-user-friends" style="font-size:10rem;color:var(--brown);"></i>
        </div>
       <div class="program-detail">
         <span class="badge">Program 05</span>

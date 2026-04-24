@@ -18,6 +18,55 @@
         display: block !important;
         gap: 0 !important;
       }
+      .founder-section {
+        padding: 80px 0 60px !important;
+      }
+      .founder-section > .container > div > div:first-child {
+        max-width: 100%;
+        margin: 0 auto 32px;
+      }
+      .founder-section > .container > div > div:first-child .reveal {
+        width: 100%;
+      }
+      .founder-section > .container > div > div:first-child [style*="aspect-ratio"] {
+        aspect-ratio: 1/1 !important;
+        max-height: 280px;
+      }
+      .founder-section .vice-chairman-img {
+        width: 120px !important;
+        height: 120px !important;
+      }
+      .timeline-item {
+        flex-direction: column;
+        gap: 16px;
+        padding-left: 60px;
+      }
+      .timeline-dot {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        font-size: 1rem;
+        box-shadow: 0 0 0 5px var(--ivory);
+      }
+      .timeline::before {
+        left: 20px;
+      }
+      [style*="grid-template-columns:repeat(3,1fr)"] {
+        grid-template-columns: 1fr !important;
+      }
+      p {
+        line-height: 1.7;
+        font-size: 0.95rem !important;
+      }
+      .founder-photo img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+      }
+    }
       .founder-section > .container > div > div:first-child {
         max-width: 100%;
         margin: 0 auto 32px;
@@ -28,6 +77,10 @@
       .founder-section > .container > div > div:first-child [style*="aspect-ratio"] {
         aspect-ratio: 1/1 !important;
         max-height: 320px;
+      }
+      .founder-section .vice-chairman-img {
+        width: 120px !important;
+        height: 120px !important;
       }
       .timeline-item {
         flex-direction: column;
@@ -251,7 +304,7 @@
       <h2>DESHAFO Leadership Team</h2>
       <p>DESHAFO is guided by a committed leadership team rooted in community service.</p>
       <div style="background:var(--white);border-radius:var(--radius-md);padding:32px;margin-top:32px;box-shadow:var(--shadow-sm);border:1.5px solid rgba(15,106,60,0.1);display:flex;flex-direction:column;align-items:center;text-align:center;">
-        <div style="width:140px;height:140px;margin:0 auto 16px;border-radius:50%;overflow:hidden;border:4px solid var(--gold);box-shadow:var(--shadow-gold);">
+        <div style="width:140px;height:140px;margin:0 auto 16px;border-radius:50%;overflow:hidden;border:4px solid var(--gold);box-shadow:var(--shadow-gold);" class="vice-chairman-img">
           <img src="assets/images/Omuga.png" alt="Omuga Julius" style="width:100%;height:100%;object-fit:cover;display:block;" />
         </div>
         <h3>Mr. Omuga Julius</h3>
