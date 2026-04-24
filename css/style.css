@@ -1501,7 +1501,13 @@ footer::before {
      /* Reduce section padding on mobile */
      .section-pad { padding: 60px 0 !important; }
      .section-pad-sm { padding: 40px 0 !important; }
-     .page-header { padding: 100px 0 60px !important; }
+   /* Page header mobile adjustment */
+   .page-header {
+     padding: 100px 0 100px !important;
+   }
+   .page-header::after {
+     height: 60px;
+   }
 
      /* Touch-friendly tap targets */
      .btn {
@@ -1549,9 +1555,18 @@ footer::before {
   .hero-stats { justify-content: center; }
   .hero-text p { margin: 0 auto 36px; }
 
-  /* About & Founder grids */
-  .about-grid,
-  .founder-grid { grid-template-columns: 1fr; gap: 40px; }
+   /* About & Founder grids */
+   .about-grid,
+   .founder-grid { grid-template-columns: 1fr; gap: 40px; }
+
+   /* About text alignment on mobile */
+   .about-text { text-align: center; }
+   .about-text .badge { margin: 0 auto 16px; }
+   .about-text h2 { margin: 0 auto 20px; }
+   .about-text p { margin: 0 auto 16px; }
+   .about-values { justify-items: center; }
+   .about-value-item { text-align: left; }
+   .about-text .btn { margin: 0 auto; display: inline-flex; }
 
   /* About images */
   .about-images-wrap {
