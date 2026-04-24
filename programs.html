@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programs — DESHAFO Integrated CBO</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    .program-full {
+      display:grid;grid-template-columns:1fr 1.6fr;gap:64px;align-items:center;
+      padding:80px 0;border-bottom:1.5px solid rgba(15,106,60,0.1);
+    }
+    .program-full:nth-child(even) { direction:rtl; }
+    .program-full:nth-child(even) > * { direction:ltr; }
+    .program-full:last-child { border-bottom:none; }
+    .program-icon-block {
+      aspect-ratio:1;
+      max-width:380px;
+      width:100%;
+      border-radius:var(--radius-lg);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:6rem;
+      box-shadow:var(--shadow-md);
+    }
+    .program-icon-block i,
+    .program-icon-block svg {
+      transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+    }
+    .program-icon-block:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(15,106,45,0.2);
+    }
+    .program-icon-block:hover i,
+    .program-icon-block:hover svg {
+      transform: scale(1.15);
+    }
+    .program-icon-block i {
+      transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+    }
+    .program-icon-block:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(15,106,45,0.2);
+    }
+    .program-icon-block:hover i {
+      transform: scale(1.15);
+    }
+    .program-icon-block svg {
+      transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+      width: 65%;max-width:220px;height:auto;
+    }
+    .program-icon-block:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(15,106,45,0.2);
+    }
+    .program-icon-block:hover svg {
+      transform: scale(1.15);
+    }
+    .program-detail .badge { background:var(--gold-pale);color:var(--brown);border-color:var(--gold); }
+    .program-detail h2 { margin:12px 0 20px; }
+    .program-detail ul { list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:16px; }
+    .program-detail ul li { display:flex;gap:10px;align-items:flex-start;font-size:0.95rem;color:var(--text-muted); }
+    .program-detail ul li::before { content:'✓';color:var(--green);font-weight:700;min-width:16px; }
+    @media(max-width:768px) {
+      .program-full { grid-template-columns:1fr;direction:ltr; }
+      .program-icon-block { max-width:100%;aspect-ratio:2/1; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar-wrapper">
+  <nav class="navbar">
+    <div class="nav-left"><a href="index.html">Home</a><a href="about.html">About</a><a href="programs.html" class="active">Programs</a><a href="gallery.html">Gallery</a></div>
+    <div class="nav-logo"><a href="index.html"><img src="assets/images/logo.png" alt="DESHAFO" /></a></div>
+    <div class="nav-right"><a href="contact.html">Contact</a><a href="donations.html">Donate</a></div>
+    <div class="nav-auth"><a href="login.html" class="btn-login">Login</a><a href="signup.html" class="btn-signup">Join Us</a></div>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+</div>
+<div class="mobile-nav">
+  <img src="assets/images/logo.png" alt="DESHAFO" class="mobile-nav-logo" />
+  <a href="index.html">Home</a><a href="about.html">About Us</a><a href="programs.html">Programs</a>
+  <a href="gallery.html">Gallery</a><a href="donations.html">Donate</a><a href="contact.html">Contact</a>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <span class="badge">What We Do</span>
+    <h1>Our Programs</h1>
+    <p>Five interconnected programs, one unified mission — transforming lives in Homabay County and beyond.</p>
+  </div>
+</div>
+
+<!-- PROGRAMS -->
+<section style="background:var(--ivory);padding:60px 0 100px;">
+  <div class="container">
+
+     <!-- 1 Education -->
+     <div class="program-full reveal">
+       <div class="program-icon-block" style="background:linear-gradient(135deg,#e8f5ee,#a8dbc0);">
+         <i class="fas fa-graduation-cap" style="font-size:10rem;color:var(--green);"></i>
+       </div>
+      <div class="program-detail">
+        <span class="badge">Program 01</span>
+        <h2>Education &amp; Mentorship</h2>
+        <p>Our flagship educational program empowers the younger generation to identify their potential, understand academic pathways under the Competency-Based Curriculum (CBC), and build the skills needed for a successful future.</p>
+        <ul>
+          <li>CBC curriculum guidance and academic support sessions</li>
+          <li>One-on-one and group mentorship for children and teens</li>
+          <li>Talent identification and development workshops</li>
+          <li>Career pathway mapping for secondary school students</li>
+          <li>DESHAFO Integrated School — accessible quality education</li>
+        </ul>
+      </div>
+    </div>
+
+     <!-- 2 Teen Mothers -->
+     <div class="program-full reveal">
+       <div class="program-icon-block" style="background:linear-gradient(135deg,#fff3e0,#ffcc80);">
+         <i class="fas fa-hand-holding-heart" style="font-size:10rem;color:var(--orange);"></i>
+       </div>
+      <div class="program-detail">
+        <span class="badge">Program 02</span>
+        <h2>Teen Mother Counselling &amp; Reintegration</h2>
+        <p>We believe no young woman's future should be defined by adversity. This program provides comprehensive support to teen mothers — helping them heal, grow, and return to school with confidence and community backing.</p>
+        <ul>
+          <li>Psychosocial counselling and trauma-informed support</li>
+          <li>School reintegration advocacy and guidance</li>
+          <li>Life skills and parenting workshops</li>
+          <li>Community sensitization on SGBV awareness</li>
+          <li>Ongoing mentorship and peer support networks</li>
+        </ul>
+      </div>
+    </div>
+
+     <!-- 3 GRETECHI -->
+     <div class="program-full reveal">
+       <div class="program-icon-block" style="background:linear-gradient(135deg,#e3f2fd,#90caf9);">
+         <i class="fas fa-users" style="font-size:10rem;color:var(--blue);"></i>
+       </div>
+      <div class="program-detail">
+        <span class="badge">Program 03 · Annual Event</span>
+        <h2>The GRETECHI Conference</h2>
+        <p>Held every August since 2015 in collaboration with MOSA Church, Homabay, the GRETECHI Conference is our annual flagship event — a gathering that brings together hundreds of children and teens for a transformative experience.</p>
+        <ul>
+          <li>Spiritual formation and values-based programming</li>
+          <li>Sexual and Gender-Based Violence (SGBV) awareness sessions</li>
+          <li>Talent showcasing and performing arts</li>
+          <li>CBC pathway orientation and academic guidance</li>
+          <li>Reaches 300+ children and teens annually</li>
+          <li>Held in partnership with MOSA Church, Homabay</li>
+        </ul>
+      </div>
+    </div>
+
+     <!-- 4 Climate Action -->
+     <div class="program-full reveal">
+       <div class="program-icon-block" style="background:linear-gradient(135deg,#e8f5e9,#a5d6a7);">
+         <i class="fas fa-tree" style="font-size:10rem;color:var(--green);"></i>
+       </div>
+      <div class="program-detail">
+        <span class="badge">Program 04</span>
+        <h2>Climate Action</h2>
+        <p>DESHAFO recognizes that environmental sustainability is inseparable from community wellbeing. Our climate action program integrates green practices into daily community life, raising the next generation of environmental stewards.</p>
+        <ul>
+          <li>Tree planting and environmental conservation drives</li>
+          <li>Environmental education in schools and community groups</li>
+          <li>Sustainable agriculture and food security workshops</li>
+          <li>Youth-led climate awareness campaigns</li>
+          <li>Integration of climate literacy into the GRETECHI Conference</li>
+        </ul>
+      </div>
+    </div>
+
+     <!-- 5 Community Reach -->
+     <div class="program-full reveal">
+       <div class="program-icon-block" style="background:linear-gradient(135deg,#fce4ec,#f48fb1);">
+         <i class="fas fa-heart" style="font-size:10rem;color:var(--brown);"></i>
+       </div>
+      <div class="program-detail">
+        <span class="badge">Program 05</span>
+        <h2>Community Reach &amp; Leadership Development</h2>
+        <p>Operating primarily across Homabay County, DESHAFO serves as a bridge — connecting underprivileged groups to resources, opportunities, and leadership training that builds stronger, more resilient communities.</p>
+        <ul>
+          <li>Leadership workshops for youth and community members</li>
+          <li>Resource mobilization and referral services</li>
+          <li>Community health and welfare outreach</li>
+          <li>Partnerships with local churches, schools, and organizations</li>
+          <li>Media advocacy through Ramogi TV &amp; Radio and Girwa Radio</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DONATE CTA -->
+<section class="donate-cta section-pad-sm">
+  <div class="container"><div class="donate-cta-inner reveal">
+    <span class="badge" style="background:rgba(217,178,76,0.15);color:var(--gold-light);border-color:rgba(217,178,76,0.35);">Support Our Work</span>
+    <h2>Help Fund These Programs</h2>
+    <p>Your support directly powers education, mentorship, and hope for children and youth in Homabay.</p>
+    <a href="donations.html" class="btn btn-gold" style="font-size:1.05rem;padding:16px 40px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="flex-shrink:0;vertical-align:middle;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> Donate Now</a>
+  </div></div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="assets/images/logo.png" alt="DESHAFO" style="width:72px;border-radius:50%;border:2px solid var(--gold);" /><p>DESHAFO Integrated CBO — empowering communities in Homabay County, Kenya since 2019.</p><div class="social-links"><a href="https://www.facebook.com/iddyrolex" target="_blank">f</a><a href="https://www.linkedin.com/in/rolex-ong-ute" target="_blank">in</a></div></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="founder.html">Our Founder</a></li><li><a href="programs.html">Programs</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
+      <div class="footer-col"><h4>Programs</h4><ul><li><a href="programs.html">Education &amp; Mentorship</a></li><li><a href="programs.html">Teen Mother Support</a></li><li><a href="programs.html">GRETECHI Conference</a></li><li><a href="programs.html">Climate Action</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><p>Outbram Village, Central Ward, Homabay Town Sub-county, Homabay County, Kenya</p></div></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 <span>DESHAFO Integrated CBO</span>. All rights reserved.</p><p>Built with <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="flex-shrink:0;vertical-align:middle;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> for community impact.</p></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

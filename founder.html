@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Founder — Rolex Ong'ute | DESHAFO Integrated CBO</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .timeline { position:relative; max-width:700px; margin:0 auto; }
+    .timeline::before { content:''; position:absolute; left:24px; top:0; bottom:0; width:2px; background:linear-gradient(180deg,var(--green),var(--gold)); }
+    .timeline-item { display:flex; gap:24px; margin-bottom:40px; position:relative; }
+    .timeline-dot { width:50px; height:50px; min-width:50px; background:var(--green); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.3rem; box-shadow:0 0 0 6px var(--ivory); z-index:1; }
+    .timeline-content { background:var(--white); border-radius:var(--radius-md); padding:24px; box-shadow:var(--shadow-sm); border:1.5px solid rgba(15,106,60,0.1); flex:1; }
+
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+      .founder-section > .container > div {
+        display: block !important;
+        gap: 0 !important;
+      }
+      .founder-section > .container > div > div:first-child {
+        max-width: 100%;
+        margin: 0 auto 32px;
+      }
+      .founder-section > .container > div > div:first-child .reveal {
+        width: 100%;
+      }
+      .founder-section > .container > div > div:first-child [style*="aspect-ratio"] {
+        aspect-ratio: 1/1 !important;
+        max-height: 320px;
+      }
+      .timeline-item {
+        flex-direction: column;
+        gap: 16px;
+        padding-left: 60px;
+      }
+      .timeline-dot {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        font-size: 1rem;
+        box-shadow: 0 0 0 5px var(--ivory);
+      }
+      .timeline::before {
+        left: 20px;
+      }
+      [style*="grid-template-columns:repeat(3,1fr)"] {
+        grid-template-columns: 1fr !important;
+      }
+      p {
+        line-height: 1.7;
+        font-size: 0.95rem !important;
+      }
+      .founder-photo img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+      }
+    }
+      .founder-section > .container > div > div:first-child {
+        max-width: 100%;
+        margin: 0 auto 32px;
+      }
+      .founder-section > .container > div > div:first-child .reveal {
+        width: 100%;
+      }
+      .founder-section > .container > div > div:first-child [style*="aspect-ratio"] {
+        aspect-ratio: 1/1 !important;
+        max-height: 350px;
+      }
+      .timeline-item {
+        flex-direction: column;
+        gap: 16px;
+        padding-left: 70px;
+      }
+      .timeline-dot {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 0;
+      }
+      .timeline::before {
+        left: 24px;
+      }
+      [style*="grid-template-columns:repeat(3,1fr)"] {
+        grid-template-columns: 1fr !important;
+      }
+      p {
+        line-height: 1.7;
+        font-size: 0.95rem !important;
+      }
+      .founder-photo img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar-wrapper">
+  <nav class="navbar">
+    <div class="nav-left"><a href="index.html">Home</a><a href="about.html">About</a><a href="programs.html">Programs</a><a href="gallery.html">Gallery</a></div>
+    <div class="nav-logo"><a href="index.html"><img src="assets/images/logo.png" alt="DESHAFO" /></a></div>
+    <div class="nav-right"><a href="contact.html">Contact</a><a href="donations.html">Donate</a></div>
+    <div class="nav-auth"><a href="login.html" class="btn-login">Login</a><a href="signup.html" class="btn-signup">Join Us</a></div>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+</div>
+<div class="mobile-nav">
+  <img src="assets/images/logo.png" alt="DESHAFO" class="mobile-nav-logo" />
+  <a href="index.html">Home</a><a href="about.html">About Us</a><a href="programs.html">Programs</a>
+  <a href="gallery.html">Gallery</a><a href="donations.html">Donate</a><a href="contact.html">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="founder-section" style="padding:140px 0 100px;position:relative;overflow:hidden;">
+  <div class="container" style="position:relative;z-index:1;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+      <div class="reveal">
+        <div style="width:100%;max-width:400px;aspect-ratio:1;background:linear-gradient(160deg,rgba(217,178,76,0.15) 0%,rgba(244,166,58,0.08) 100%);border:2px solid rgba(217,178,76,0.3);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;overflow:hidden;margin:0 auto 32px;">
+          <img src="assets/images/Rolex2.jpeg" alt="Rolex Ong'ute" style="width:100%;height:100%;object-fit:cover;" />
+        </div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <span class="badge" style="background:rgba(217,178,76,0.15);color:var(--gold-light);border-color:rgba(217,178,76,0.35);">Founder &amp; Executive Director</span>
+        <h1 style="color:var(--white);font-size:clamp(2rem,4vw,3.2rem);">Rolex Ong'ute</h1>
+        <p style="color:var(--gold-light);font-family:var(--font-head);font-weight:600;font-size:1.05rem;margin-bottom:20px;">
+          MSc · Teacher · Mentor · Child Protection Advocate
+        </p>
+        <p style="color:rgba(255,255,255,0.72);margin-bottom:16px;">A mother of three from Homabay County, Rolex Ong'ute is the heart and driving force behind DESHAFO Integrated CBO. Her work spans education, community mobilization, media engagement, and faith-based leadership.</p>
+        <p style="color:rgba(255,255,255,0.72);margin-bottom:24px;">Recognized for her resilience and compassionate leadership, Rolex holds a Master's degree from Maseno University and teaches Physics and Chemistry at Obera Boys High School.</p>
+        <div class="founder-quote" style="margin-bottom:28px;">
+          <p>"To help children, teens, and youth identify their inbuilt potential, amplify their voices, and become future leaders and change-makers in their communities."</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:center;">
+          <a href="https://www.facebook.com/iddyrolex" target="_blank" class="btn btn-outline" style="display:inline-flex;align-items:center;gap:8px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            Facebook
+          </a>
+          <a href="https://www.linkedin.com/in/rolex-ong-ute" target="_blank" class="btn btn-gold" style="display:inline-flex;align-items:center;gap:8px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROLES & RESPONSIBILITIES -->
+<section class="section-pad" style="background:var(--ivory);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge">Her Roles</span>
+      <h2>A Woman of Many Callings</h2>
+      <p>Rolex Ong'ute wears many hats — each one in service of her community.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+      <div class="mission-card reveal reveal-delay-1">
+        <div class="card-icon" style="background:rgba(15,106,60,0.1);"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <h3>Founder &amp; Executive Director</h3>
+        <p>Leads DESHAFO Integrated CBO from vision to implementation, ensuring sustainable impact across all programs.</p>
+      </div>
+      <div class="mission-card reveal reveal-delay-2">
+        <div class="card-icon" style="background:rgba(217,178,76,0.12);"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Teacher of Physics &amp; Chemistry</h3>
+        <p>Serves as a dedicated educator at Obera Boys High School — modeling the academic excellence she inspires in youth.</p>
+      </div>
+      <div class="mission-card reveal reveal-delay-3">
+        <div class="card-icon" style="background:rgba(244,166,58,0.12);"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Child Protection Advocate</h3>
+        <p>A passionate public speaker and advocate for child safety, mental health, and SGBV awareness in schools and communities.</p>
+      </div>
+      <div class="mission-card reveal reveal-delay-1">
+        <div class="card-icon" style="background:rgba(44,143,214,0.1);"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg></div>
+        <h3>Media Panelist</h3>
+        <p>Frequent guest on Ramogi TV and Radio, discussing education policy, parenting, and child development in the Lake region.</p>
+      </div>
+      <div class="mission-card reveal reveal-delay-2">
+        <div class="card-icon" style="background:rgba(122,75,31,0.1);"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg></div>
+        <h3>Gospel Interpreter</h3>
+        <p>Serves as interpreter for Girwa Radio's weekly gospel program, bridging faith and community outreach in the local language.</p>
+      </div>
+      <div class="mission-card reveal reveal-delay-3">
+        <div class="card-icon" style="background:rgba(15,106,60,0.1);"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 22H6a2 2 0 0 1-2-2V8l6-6 2 2 2-2 6 6v12a2 2 0 0 1-2 2z"/><path d="M12 8v8"/><path d="M8 12h8"/></svg></div>
+        <h3>Children's Minister</h3>
+        <p>Leads children's ministry at MOSA Church, Homabay — recipient of the Church &amp; Community Certificate Award for her consistency.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="section-pad" style="background:var(--ivory-dark);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge">Her Journey</span>
+      <h2>A Life of Purpose</h2>
+    </div>
+    <div class="timeline reveal">
+      <div class="timeline-item">
+        <div class="timeline-dot"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <div class="timeline-content">
+          <h4>Academic Excellence</h4>
+          <p>Completed a Master's degree from Maseno University. Has been teaching Physics and Chemistry at Obera Boys High School, shaping young scientific minds.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+        <div class="timeline-content">
+          <h4>2015 — GRETECHI Conference Begins</h4>
+          <p>Launched the GRETECHI Conference in collaboration with MOSA Church — an annual event now impacting 300+ youth each August.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+        <div class="timeline-content">
+          <h4>2019 — DESHAFO Integrated CBO Founded</h4>
+          <p>Officially registered DESHAFO Integrated CBO, formalizing years of community work into an organized, mission-driven organization.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 6 2 6 2 12 8 12"/><polyline points="16 6 22 6 22 12 16 12"/><path d="M12 17v4"/><path d="M8 21h8"/><path d="M8 6v6a4 4 0 0 0 8 0V6"/></svg></div>
+        <div class="timeline-content">
+          <h4>Award Recognition</h4>
+          <p>Received the Church and Community Certificate Award for her unwavering consistency in community mobilization and service.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg></div>
+        <div class="timeline-content">
+          <h4>Media Engagement</h4>
+          <p>Became a regular media panelist on Ramogi TV and Radio, expanding DESHAFO's reach and advocacy voice across the region.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VICE CHAIRMAN -->
+<section class="section-pad-sm" style="background:var(--ivory);">
+  <div class="container">
+    <div style="max-width:560px;margin:0 auto;text-align:center;" class="reveal">
+      <span class="badge">Leadership</span>
+      <h2>DESHAFO Leadership Team</h2>
+      <p>DESHAFO is guided by a committed leadership team rooted in community service.</p>
+      <div style="background:var(--white);border-radius:var(--radius-md);padding:32px;margin-top:32px;box-shadow:var(--shadow-sm);border:1.5px solid rgba(15,106,60,0.1);display:flex;flex-direction:column;align-items:center;text-align:center;">
+        <div style="width:140px;height:140px;margin:0 auto 16px;border-radius:50%;overflow:hidden;border:4px solid var(--gold);box-shadow:var(--shadow-gold);">
+          <img src="assets/images/Omuga.png" alt="Omuga Julius" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        </div>
+        <h3>Mr. Omuga Julius</h3>
+        <p style="color:var(--green);font-family:var(--font-head);font-weight:600;">Vice Chairman</p>
+        <p>Supporting DESHAFO's governance and community relations as Vice Chairman of the organization.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="assets/images/logo.png" alt="DESHAFO" style="width:72px;border-radius:50%;border:2px solid var(--gold);" /><p>DESHAFO Integrated CBO — DEstiny SHApers FOundation. Empowering children, youth, and women in Homabay County since 2019.</p><div class="social-links"><a href="https://www.facebook.com/iddyrolex" target="_blank">f</a><a href="https://www.linkedin.com/in/rolex-ong-ute" target="_blank">in</a></div></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="founder.html">Our Founder</a></li><li><a href="programs.html">Programs</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
+      <div class="footer-col"><h4>Programs</h4><ul><li><a href="programs.html">Education &amp; Mentorship</a></li><li><a href="programs.html">Teen Mother Support</a></li><li><a href="programs.html">GRETECHI Conference</a></li><li><a href="programs.html">Climate Action</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><p>Outbram Village, Central Ward, Homabay Town Sub-county, Homabay County, Kenya</p></div></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 <span>DESHAFO Integrated CBO</span>. All rights reserved.</p><p>Built with <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="flex-shrink:0;vertical-align:middle;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> for community impact.</p></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

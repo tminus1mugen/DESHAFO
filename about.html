@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — DESHAFO Integrated CBO</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Mobile responsive overrides */
+    @media (max-width: 768px) {
+      .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+      }
+      .about-img-wrap {
+        order: -1;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      .polaroid-strip {
+        gap: 10px;
+      }
+      .polaroid {
+        width: 48%;
+        transform: rotate(0) !important;
+      }
+      .polaroid-1, .polaroid-2, .polaroid-3 {
+        margin: 0;
+      }
+      .about-text {
+        text-align: left;
+      }
+      [style*="display:grid;grid-template-columns:repeat(3,1fr)"] {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+      }
+      .mission-card {
+        padding: 24px 20px;
+      }
+      p {
+        line-height: 1.7;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar-wrapper">
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+    <div class="nav-logo"><a href="index.html"><img src="assets/images/logo.png" alt="DESHAFO" /></a></div>
+    <div class="nav-right">
+      <a href="contact.html">Contact</a>
+      <a href="donations.html">Donate</a>
+    </div>
+    <div class="nav-auth">
+      <a href="login.html" class="btn-login">Login</a>
+      <a href="signup.html" class="btn-signup">Join Us</a>
+    </div>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+</div>
+<div class="mobile-nav">
+  <img src="assets/images/logo.png" alt="DESHAFO" class="mobile-nav-logo" />
+  <a href="index.html">Home</a><a href="about.html">About Us</a><a href="programs.html">Programs</a>
+  <a href="gallery.html">Gallery</a><a href="donations.html">Donate</a><a href="contact.html">Contact</a>
+  <a href="founder.html">Our Founder</a>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <span class="badge">Our Story</span>
+    <h1>About DESHAFO</h1>
+    <p>DEstiny SHApers FOundation — born from community, built for transformation.</p>
+  </div>
+</div>
+
+<!-- WHAT IS DESHAFO -->
+<section class="section-pad" style="background:var(--ivory);">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <span class="badge">Who We Are</span>
+        <h2>A Community Built on Purpose</h2>
+        <p>DESHAFO Integrated CBO is a registered non-profit Community Based Organization founded in 2019 by Rolex Ong'ute. We are based in <strong>Outbram Village, Central Ward, Homabay Town Sub-county, Homabay County, Kenya</strong>.</p>
+        <p>The name DESHAFO stands for <strong>DEstiny SHApers FOundation</strong>. "Integrated" reflects our commitment to addressing multiple dimensions of community wellbeing under one unified mission.</p>
+        <p>We serve children, youth, and women — particularly those who are underprivileged — by creating access to education, mentorship, counselling, and climate action initiatives.</p>
+      </div>
+      <div class="about-img-wrap reveal reveal-delay-1">
+        <div class="polaroid-strip">
+          <div class="polaroid polaroid-1">
+            <div class="polaroid-photo">
+              <img src="assets/images/photo1.jpg" alt="Teacher with DESHAFO student" />
+            </div>
+            <p>Our School</p>
+          </div>
+          <div class="polaroid polaroid-2">
+            <div class="polaroid-photo">
+              <img src="assets/images/photo2.jpg" alt="GRETECHI Conference session" />
+            </div>
+            <p>GRETECHI Conference</p>
+          </div>
+          <div class="polaroid polaroid-3">
+            <div class="polaroid-photo">
+              <img src="assets/images/photo3.jpg" alt="Mentorship session with children" />
+            </div>
+            <p>Mentorship in Action</p>
+          </div>
+        </div>
+        <div class="about-img-badge">
+          <strong>Est.</strong>
+          <span>2019</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION, VISION, VALUES -->
+<section class="section-pad" style="background:var(--ivory-dark);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge">Our Foundation</span>
+      <h2>Mission, Vision &amp; Values</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;">
+      <div class="mission-card reveal reveal-delay-1">
+        <div class="card-icon" style="background:rgba(15,106,60,0.1);"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+        <h3>Our Mission</h3>
+        <p>To create opportunities for underprivileged children, youth, and women through education, mentorship, and climate action in Homabay County.</p>
+      </div>
+      <div class="mission-card reveal reveal-delay-2">
+        <div class="card-icon" style="background:rgba(217,178,76,0.12);"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Our Vision</h3>
+        <p>A community where every child, teen, and young person can identify their inbuilt potential, amplify their voice, and become a future leader.</p>
+      </div>
+      <div class="mission-card reveal reveal-delay-3">
+        <div class="card-icon" style="background:rgba(44,143,214,0.1);"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22 8.5 12 15.5 2 8.5"/></svg></div>
+        <h3>Our Values</h3>
+        <p>Integrity, compassion, community ownership, spiritual grounding, child protection, and environmental responsibility guide everything we do.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHERE WE OPERATE -->
+<section class="section-pad founder-section">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="section-header reveal" style="text-align:center;max-width:640px;margin:0 auto 64px;">
+      <span class="badge" style="background:rgba(217,178,76,0.15);color:var(--gold-light);border-color:rgba(217,178,76,0.35);">Location</span>
+      <h2 style="color:var(--white);">Rooted in Homabay County</h2>
+      <p style="color:rgba(255,255,255,0.7);">Our work begins in Outbram Village and reaches across Homabay County and beyond.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:28px;max-width:800px;margin:0 auto;">
+      <div style="background:rgba(255,255,255,0.08);border:1.5px solid rgba(217,178,76,0.25);border-radius:var(--radius-md);padding:28px;" class="reveal reveal-delay-1">
+        <div style="font-size:1.8rem;margin-bottom:12px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h4 style="color:var(--gold-light);margin-bottom:8px;">Headquarters</h4>
+        <p style="color:rgba(255,255,255,0.65);font-size:0.95rem;">Outbram Village, Central Ward<br/>Homabay Town Sub-county<br/>Homabay County, Kenya</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.08);border:1.5px solid rgba(217,178,76,0.25);border-radius:var(--radius-md);padding:28px;" class="reveal reveal-delay-2">
+        <div style="font-size:1.8rem;margin-bottom:12px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><path d="M12 2v3"/></svg></div>
+        <h4 style="color:var(--gold-light);margin-bottom:8px;">DESHAFO School</h4>
+        <p style="color:rgba(255,255,255,0.65);font-size:0.95rem;">DESHAFO Integrated School — a CBO-built educational institution serving the local community with quality, accessible learning.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.08);border:1.5px solid rgba(217,178,76,0.25);border-radius:var(--radius-md);padding:28px;" class="reveal reveal-delay-3">
+        <div style="font-size:1.8rem;margin-bottom:12px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 22H6a2 2 0 0 1-2-2V8l6-6 2 2 2-2 6 6v12a2 2 0 0 1-2 2z"/><path d="M12 8v8"/><path d="M8 12h8"/></svg></div>
+        <h4 style="color:var(--gold-light);margin-bottom:8px;">MOSA Church Partnership</h4>
+        <p style="color:rgba(255,255,255,0.65);font-size:0.95rem;">The annual GRETECHI Conference is held in collaboration with MOSA Church, Homabay — a spiritual and community partnership since 2015.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.08);border:1.5px solid rgba(217,178,76,0.25);border-radius:var(--radius-md);padding:28px;" class="reveal reveal-delay-4">
+        <div style="font-size:1.8rem;margin-bottom:12px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg></div>
+        <h4 style="color:var(--gold-light);margin-bottom:8px;">Media Presence</h4>
+        <p style="color:rgba(255,255,255,0.65);font-size:0.95rem;">Our founder is a frequent panelist on Ramogi TV &amp; Radio and an interpreter for Girwa Radio's weekly gospel program, amplifying our message.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESHAFO SCHOOL CTA -->
+<section class="section-pad" style="background:var(--ivory);">
+  <div class="container" style="text-align:center;">
+    <div class="reveal">
+      <span class="badge">Our School</span>
+      <h2>DESHAFO Integrated School</h2>
+      <p style="max-width:560px;margin:16px auto 32px;">Beyond programs, DESHAFO has built a school — ensuring that access to quality education is a reality, not just a goal, for children in our community.</p>
+      <a href="donations.html" class="btn btn-primary">Support the School</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/images/logo.png" alt="DESHAFO" style="width:72px;border-radius:50%;border:2px solid var(--gold);" />
+        <p>DESHAFO Integrated CBO — DEstiny SHApers FOundation. Empowering children, youth, and women in Homabay County, Kenya since 2019.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/iddyrolex" target="_blank">f</a>
+          <a href="https://www.linkedin.com/in/rolex-ong-ute" target="_blank">in</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="founder.html">Our Founder</a></li><li><a href="programs.html">Programs</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
+      <div class="footer-col"><h4>Programs</h4><ul><li><a href="programs.html">Education &amp; Mentorship</a></li><li><a href="programs.html">Teen Mother Support</a></li><li><a href="programs.html">GRETECHI Conference</a></li><li><a href="programs.html">Climate Action</a></li><li><a href="programs.html">Community Reach</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><p>Outbram Village, Central Ward, Homabay Town Sub-county, Homabay County, Kenya</p></div></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 <span>DESHAFO Integrated CBO</span>. All rights reserved.</p>
+      <p>Built with <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="flex-shrink:0;vertical-align:middle;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> for community impact.</p>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

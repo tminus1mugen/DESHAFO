@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DESHAFO Integrated CBO — Shaping Destiny. Restoring Hope.</title>
+  <meta name="description" content="DESHAFO Integrated CBO — empowering underprivileged children, youth, and women through education, mentorship, and climate action in Homabay, Kenya." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════ NAVBAR ═══════════════════ -->
+<div class="navbar-wrapper">
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="assets/images/logo.png" alt="DESHAFO Logo" />
+      </a>
+    </div>
+
+    <div class="nav-right">
+      <a href="contact.html">Contact</a>
+      <a href="donations.html">Donate</a>
+    </div>
+
+    <div class="nav-auth">
+      <a href="login.html" class="btn-login">Login</a>
+      <a href="signup.html" class="btn-signup">Join Us</a>
+    </div>
+
+    <div class="hamburger" role="button" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+</div>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav">
+  <img src="assets/images/logo.png" alt="DESHAFO" class="mobile-nav-logo" />
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="programs.html">Programs</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="donations.html">Donate</a>
+  <a href="contact.html">Contact</a>
+  <a href="founder.html">Our Founder</a>
+  <div class="mobile-nav-auth">
+    <a href="login.html" class="btn btn-outline" style="font-size:0.9rem;padding:10px 24px;">Login</a>
+    <a href="signup.html" class="btn btn-gold" style="font-size:0.9rem;padding:10px 24px;">Join Us</a>
+  </div>
+</div>
+
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-circle"></div>
+    <div class="hero-bg-circle"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="badge">Est. 2019 · Homabay, Kenya</span>
+        <h1 class="org-name">DESHAFO<br>INTEGRATED CBO</h1>
+        <h2 class="org-tagline">Shaping <em>Destiny.</em> Restoring Hope. Building Community.</h2>
+        <p>Empowering underprivileged children, youth, and women through education, mentorship, and climate action — rooted in Homabay County, growing across Kenya.</p>
+        <div class="hero-cta">
+          <a href="donations.html" class="btn btn-gold"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="flex-shrink:0;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> Donate Now</a>
+          <a href="programs.html" class="btn btn-outline">Explore Programs</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat-item">
+            <div class="num">300<span style="color:var(--orange)">+</span></div>
+            <div class="label">Youth Reached Annually</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="num">5</div>
+            <div class="label">Core Programs</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="num">2019</div>
+            <div class="label">Year Founded</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" id="orbitVisual">
+        <!-- Decorative orbit rings -->
+        <div class="orbit-ring"></div>
+        <div class="orbit-ring-inner"></div>
+
+        <!-- Central logo -->
+        <div class="hero-logo-ring">
+          <img src="assets/images/logo.png" alt="DESHAFO Integrated CBO" />
+        </div>
+
+        <!-- Orbit node: Education -->
+        <div class="orbit-node">
+          <div class="orbit-icon" style="background:rgba(217,178,76,0.18);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold-light)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <div class="orbit-tooltip">
+            <strong>Education</strong>
+            <span>CBC mentorship</span>
+          </div>
+        </div>
+
+        <!-- Orbit node: Climate Action -->
+        <div class="orbit-node">
+          <div class="orbit-icon" style="background:rgba(44,143,214,0.18);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7ecfff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+          </div>
+          <div class="orbit-tooltip">
+            <strong>Climate Action</strong>
+            <span>Greener futures</span>
+          </div>
+        </div>
+
+        <!-- Orbit node: Teen Mothers -->
+        <div class="orbit-node">
+          <div class="orbit-icon" style="background:rgba(244,166,58,0.18);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div class="orbit-tooltip">
+            <strong>Teen Mothers</strong>
+            <span>Reintegration</span>
+          </div>
+        </div>
+
+        <!-- Orbit node: Community -->
+        <div class="orbit-node">
+          <div class="orbit-icon" style="background:rgba(15,106,60,0.3);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7dffb3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="orbit-tooltip">
+            <strong>Community</strong>
+            <span>Reach &amp; leadership</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-wave"></div>
+</section>
+
+
+<!-- ═══════════════════ MISSION CARDS ═══════════════════ -->
+<section class="section-pad" style="background:var(--ivory);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge">What We Do</span>
+      <h2>Our Core Areas of Impact</h2>
+      <p>DESHAFO integrates several community-driven activities under one mission — transforming lives from the roots up.</p>
+    </div>
+    <div class="mission-grid">
+      <div class="mission-card reveal reveal-delay-1">
+        <div class="card-icon" style="background:rgba(15,106,60,0.1);"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+        <h3>Education &amp; Mentorship</h3>
+        <p>Empowering the younger generation to identify their potential and academic pathways through the CBC curriculum.</p>
+      </div>
+      <div class="mission-card reveal reveal-delay-2">
+        <div class="card-icon" style="background:rgba(244,166,58,0.12);"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Teen Mother Support</h3>
+        <p>Counselling and reintegration of teen mothers back into school and community life with dignity and care.</p>
+      </div>
+      <div class="mission-card reveal reveal-delay-3">
+        <div class="card-icon" style="background:rgba(44,143,214,0.1);"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+        <h3>GRETECHI Conference</h3>
+        <p>Annual flagship event each August — covering spirituality, SGBV awareness, talent development, and CBC pathways.</p>
+      </div>
+      <div class="mission-card reveal reveal-delay-4">
+        <div class="card-icon" style="background:rgba(122,75,31,0.1);"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+        <h3>Climate Action</h3>
+        <p>Integrating environmental sustainability into community-driven initiatives for a greener Homabay County.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════ ABOUT SECTION ═══════════════════ -->
+<section class="section-pad about-section">
+  <div class="container">
+      <div class="about-grid">
+        <div class="about-images-wrap reveal">
+          <div class="about-images-grid">
+            <div class="about-img-card large">
+              <img src="assets/images/photo1.jpg" alt="Education at DESHAFO" />
+              <div class="img-overlay">
+                <span class="img-tag">Education</span>
+              </div>
+            </div>
+            <div class="about-img-card">
+              <img src="assets/images/mentorship.jpeg" alt="Mentorship at DESHAFO" />
+              <div class="img-overlay">
+                <span class="img-tag">Mentorship</span>
+              </div>
+            </div>
+            <div class="about-img-card">
+              <img src="assets/images/climate action.jpeg" alt="Climate action initiative" />
+              <div class="img-overlay">
+                <span class="img-tag">Climate Action</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="about-text reveal reveal-delay-1">
+        <span class="badge">About DESHAFO</span>
+        <h2>DEstiny SHApers FOundation</h2>
+        <p>Founded in 2019 by Rolex Ong'ute, DESHAFO Integrated CBO is a registered community-based organization in Outbram Village, Central Ward, Homabay Town Sub-county.</p>
+        <p>Our mission is to create opportunities for underprivileged children, youth, and women through education, mentorship, and climate action. We also operate <strong>DESHAFO Integrated School</strong> — a testament to our commitment to accessible education.</p>
+        <div class="about-values">
+          <div class="about-value-item">
+            <div class="v-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <div>
+              <strong>Mission-Driven</strong>
+              <span>Purpose over profit</span>
+            </div>
+          </div>
+          <div class="about-value-item">
+            <div class="v-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+            <div>
+              <strong>Community-Rooted</strong>
+              <span>Born from Homabay</span>
+            </div>
+          </div>
+          <div class="about-value-item">
+            <div class="v-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+            <div>
+              <strong>Holistic Care</strong>
+              <span>Body, mind &amp; spirit</span>
+            </div>
+          </div>
+          <div class="about-value-item">
+            <div class="v-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <div>
+              <strong>Child Protection</strong>
+              <span>Safe spaces always</span>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <a href="about.html" class="btn btn-primary">Learn Our Full Story →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════ IMPACT NUMBERS ═══════════════════ -->
+<section class="section-pad-sm impact-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge">Our Impact</span>
+      <h2>Numbers That Tell Our Story</h2>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-card reveal reveal-delay-1">
+        <div class="i-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M12 14c-5 0-8 2.5-8 4v1h16v-1c0-1.5-3-4-8-4z"/></svg></div>
+        <div class="i-num count-up" data-target="300" data-suffix="+">300+</div>
+        <div class="i-label">Children &amp; Teens Reached Annually</div>
+      </div>
+      <div class="impact-card reveal reveal-delay-2">
+        <div class="i-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <div class="i-num count-up" data-target="2019" data-suffix="">2019</div>
+        <div class="i-label">Year DESHAFO Was Founded</div>
+      </div>
+      <div class="impact-card reveal reveal-delay-3">
+        <div class="i-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+        <div class="i-num count-up" data-target="9" data-suffix="+">9+</div>
+        <div class="i-label">GRETECHI Conferences Held</div>
+      </div>
+      <div class="impact-card reveal reveal-delay-4">
+        <div class="i-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><path d="M12 2v3"/></svg></div>
+        <div class="i-num">1</div>
+        <div class="i-label">CBO-Built School in Operation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════ FOUNDER SPOTLIGHT ═══════════════════ -->
+<section class="section-pad founder-section">
+  <div class="container">
+    <div class="founder-grid">
+      <div class="founder-photo reveal">
+        <img src="assets/images/Rolex.jpeg" alt="Rolex Ong'ute" />
+      </div>
+      <div class="founder-content reveal reveal-delay-1">
+        <span class="badge">Meet Our Founder</span>
+        <h2>Rolex Ong'ute</h2>
+        <p class="founder-title">Founder &amp; Executive Director · Physics &amp; Chemistry Teacher · Child Protection Advocate</p>
+        <p>A mother of three from Homabay County, Rolex holds a Master's degree from Maseno University. She teaches at Obera Boys High School and is a frequent media panelist on Ramogi TV and Radio, speaking on education, child protection, and parenting.</p>
+        <p>As Children's Minister at MOSA Church and recipient of the Church &amp; Community Certificate Award, Rolex brings faith, resilience, and compassionate leadership to every initiative.</p>
+        <div class="founder-quote">
+          <p>"To help children, teens, and youth identify their inbuilt potential, amplify their voices, and become future leaders and change-makers in their communities."</p>
+        </div>
+        <a href="founder.html" class="btn btn-gold">Read Her Full Story →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════ PROGRAMS PREVIEW ═══════════════════ -->
+<section class="section-pad" style="background:var(--ivory);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge">Our Programs</span>
+      <h2>Transforming Lives Through Action</h2>
+      <p>Each program is designed to meet the community where it is — and carry it further than it dared to dream.</p>
+    </div>
+    <div class="programs-grid">
+      <div class="program-card reveal reveal-delay-1">
+        <div class="program-card-top" style="background:linear-gradient(135deg,#e8f5ee,#c8e8d4);"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+        <div class="program-card-body">
+          <h3>Education &amp; Mentorship</h3>
+          <p>CBC pathway guidance, academic support, and mentorship for children and youth in Homabay County.</p>
+          <a href="programs.html" class="program-link">Learn more →</a>
+        </div>
+      </div>
+      <div class="program-card reveal reveal-delay-2">
+        <div class="program-card-top" style="background:linear-gradient(135deg,#fff3e0,#ffe0b2);"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <div class="program-card-body">
+          <h3>Teen Mother Reintegration</h3>
+          <p>Counselling, emotional support, and school reintegration for teen mothers — restoring hope and dignity.</p>
+          <a href="programs.html" class="program-link">Learn more →</a>
+        </div>
+      </div>
+      <div class="program-card reveal reveal-delay-3">
+        <div class="program-card-top" style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+        <div class="program-card-body">
+          <h3>GRETECHI Conference</h3>
+          <p>Annual flagship event (every August) addressing spirituality, SGBV, talent development, and CBC readiness.</p>
+          <a href="programs.html" class="program-link">Learn more →</a>
+        </div>
+      </div>
+      <div class="program-card reveal reveal-delay-1">
+        <div class="program-card-top" style="background:linear-gradient(135deg,#e8f5e9,#a5d6a7);"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+        <div class="program-card-body">
+          <h3>Climate Action</h3>
+          <p>Environmental sustainability integrated into community programs — planting seeds for a greener future.</p>
+          <a href="programs.html" class="program-link">Learn more →</a>
+        </div>
+      </div>
+      <div class="program-card reveal reveal-delay-2">
+        <div class="program-card-top" style="background:linear-gradient(135deg,#fce4ec,#f8bbd0);"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="program-card-body">
+          <h3>Community Reach &amp; Leadership</h3>
+          <p>Bridging underprivileged groups to resources, leadership training, and community mobilization.</p>
+          <a href="programs.html" class="program-link">Learn more →</a>
+        </div>
+      </div>
+      <div class="program-card reveal reveal-delay-3" style="background:var(--green-deep);border-color:rgba(217,178,76,0.3);">
+        <div class="program-card-top" style="background:rgba(217,178,76,0.1);"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><path d="M12 2v3"/></svg></div>
+        <div class="program-card-body">
+          <h3 style="color:var(--gold-light);">DESHAFO Integrated School</h3>
+          <p style="color:rgba(255,255,255,0.7);">A CBO-built school ensuring quality education is accessible to every child in the community.</p>
+          <a href="lms.html" class="program-link" style="color:var(--gold-light);">Learn more →</a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px;" class="reveal">
+      <a href="programs.html" class="btn btn-primary">View All Programs</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════ GALLERY PREVIEW ═══════════════════ -->
+<section class="section-pad-sm" style="background:var(--ivory-dark);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge">Gallery</span>
+      <h2>Moments of Impact</h2>
+    </div>
+    <div class="gallery-preview-grid reveal">
+      <div class="gallery-preview-item" style="background:linear-gradient(135deg,var(--green),var(--green-mid));">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        <div class="overlay"><span>Community Programs</span></div>
+      </div>
+      <div class="gallery-preview-item" style="background:linear-gradient(135deg,var(--gold),var(--orange));">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        <div class="overlay"><span>GRETECHI Conference</span></div>
+      </div>
+      <div class="gallery-preview-item" style="background:linear-gradient(135deg,var(--blue),#1a6fa0);">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <div class="overlay"><span>Education Sessions</span></div>
+      </div>
+      <div class="gallery-preview-item" style="background:linear-gradient(135deg,var(--brown),var(--brown-light));">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <div class="overlay"><span>Community Outreach</span></div>
+      </div>
+      <div class="gallery-preview-item" style="background:linear-gradient(135deg,#2e7d32,#4caf50);">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        <div class="overlay"><span>Climate Action</span></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px;" class="reveal">
+      <a href="gallery.html" class="btn btn-primary">View Full Gallery</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════ DONATE CTA ═══════════════════ -->
+<section class="section-pad donate-cta">
+  <div class="container">
+    <div class="donate-cta-inner reveal">
+      <span class="badge" style="background:rgba(217,178,76,0.15);color:var(--gold-light);border-color:rgba(217,178,76,0.35);">Support the Mission</span>
+      <h2>Your Giving Changes a Child's Future</h2>
+      <p>Every contribution — big or small — goes directly to supporting children, teen mothers, and youth in Homabay County.</p>
+      <div class="mpesa-detail">
+        <p>M-PESA PAYBILL</p>
+        <strong>Coming Soon</strong>
+      </div>
+      <br/>
+      <a href="donations.html" class="btn btn-gold" style="font-size:1.05rem;padding:16px 40px;"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="flex-shrink:0;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> Donate Today</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/images/logo.png" alt="DESHAFO" style="width:72px;border-radius:50%;border:2px solid var(--gold);" />
+        <p>DESHAFO Integrated CBO — DEstiny SHApers FOundation. Empowering children, youth, and women in Homabay County, Kenya since 2019.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/iddyrolex" target="_blank" title="Facebook">f</a>
+          <a href="https://www.linkedin.com/in/rolex-ong-ute" target="_blank" title="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="founder.html">Our Founder</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="programs.html">Education &amp; Mentorship</a></li>
+          <li><a href="programs.html">Teen Mother Support</a></li>
+          <li><a href="programs.html">GRETECHI Conference</a></li>
+          <li><a href="programs.html">Climate Action</a></li>
+          <li><a href="programs.html">Community Reach</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <p>Outbram Village, Central Ward, Homabay Town Sub-county, Homabay County, Kenya</p>
+        </div>
+        <div class="footer-contact-item">
+          <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <p>deshafo.org (coming soon)</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 <span>DESHAFO Integrated CBO</span>. All rights reserved. Homabay, Kenya.</p>
+      <p>Built with <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="flex-shrink:0;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> for community impact.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
