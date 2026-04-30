@@ -1603,6 +1603,16 @@ footer::before {
   .impact-grid,
   .programs-grid { grid-template-columns: 1fr; }
 
+  /* Climate Impact Section - Mobile Responsive */
+  /* Override inline styles for 4-column grid to 1 column on mobile */
+  .climate-impact-section > .container > div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .climate-impact-section .climate-stat-card {
+    padding: 24px 16px !important;
+  }
+
 /* Gallery */
    .gallery-preview-grid {
      grid-template-columns: 1fr 1fr;
