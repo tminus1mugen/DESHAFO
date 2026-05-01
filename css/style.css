@@ -1405,6 +1405,13 @@ footer::before {
   transform: scale(1.1);
 }
 
+/* Click handler overlay for robust mobile tapping */
+.gallery-card-click-handler {
+  position: absolute;
+  inset: 0;
+  z-index: 5; /* Ensure it's on top of the overlay and play button */
+}
+
 /* Gallery Card Overlays & Grouping */
 .gallery-card-overlay {
   position: absolute;
