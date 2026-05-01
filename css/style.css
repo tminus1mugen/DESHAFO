@@ -1790,6 +1790,11 @@ footer::before {
   }
   .gallery-card, .gallery-card-tall, .gallery-card-wide, .gallery-card-large {
     aspect-ratio: auto !important;
+    grid-row: auto !important;
+    grid-column: span 1 !important;
+  }
+  .gallery-card-wide, .gallery-card-large {
+    grid-column: span 2 !important;
   }
   .gallery-card-tall .gallery-card-inner img { height: 280px; }
   .gallery-card-wide .gallery-card-inner img { height: 200px; }
