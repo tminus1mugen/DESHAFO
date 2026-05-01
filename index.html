@@ -35,13 +35,12 @@
       </div>
 
     <div class="nav-right">
+      <a href="founder.html">Founder</a>
       <a href="contact.html">Contact</a>
-      <a href="donations.html">Donate</a>
     </div>
 
     <div class="nav-auth">
-      <a href="login.html" class="btn-login">Login</a>
-      <a href="signup.html" class="btn-signup">Join Us</a>
+      <a href="donations.html" class="btn btn-gold" style="padding:8px 20px;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.5px;">Donate Now</a>
     </div>
 
     <div class="hamburger" role="button" aria-label="Menu">
@@ -60,10 +59,6 @@
   <a href="donations.html">Donate</a>
   <a href="contact.html">Contact</a>
   <a href="founder.html">Our Founder</a>
-  <div class="mobile-nav-auth">
-    <a href="login.html" class="btn btn-outline" style="font-size:0.9rem;padding:10px 24px;">Login</a>
-    <a href="signup.html" class="btn btn-gold" style="font-size:0.9rem;padding:10px 24px;">Join Us</a>
-  </div>
 </div>
 
 
@@ -157,6 +152,83 @@
     </div>
   </div>
   <div class="hero-wave"></div>
+</section>
+
+
+<!-- ═══════════════════ COLLABORATORS GRID ═══════════════════ -->
+<section class="section-pad" style="background:var(--ivory-dark);">
+  <div class="container">
+    <div class="section-header reveal" style="margin-bottom: 48px;">
+      <span class="badge">Our Network</span>
+      <h2>Trusted &amp; Backed By</h2>
+      <p>We work hand-in-hand with leading organizations, institutions, and community bodies to amplify our grassroots impact.</p>
+    </div>
+    
+    <div class="collaborators-grid reveal reveal-delay-1">
+      <!-- MOSA (Uses styled icon fallback) -->
+      <div class="collab-card theme-mosa">
+        <div class="collab-logo-wrap">
+          <div class="fallback-icon"><i class="fa-solid fa-church"></i></div>
+        </div>
+        <div class="collab-info">
+          <h4>MOSA Church</h4>
+          <span>Spiritual &amp; Mentorship Partner</span>
+        </div>
+      </div>
+
+      <div class="collab-card theme-coke">
+        <div class="collab-logo-wrap">
+          <img src="assets/images/coke.jpeg" alt="Coca-Cola" loading="lazy" />
+        </div>
+        <div class="collab-info"><h4>Coca-Cola</h4><span>Clean-up &amp; Environmental Support</span></div>
+      </div>
+
+      <div class="collab-card theme-kfs">
+        <div class="collab-logo-wrap">
+          <img src="assets/images/kfs.jpeg" alt="Kenya Forest Service" loading="lazy" />
+        </div>
+        <div class="collab-info"><h4>Kenya Forest Service</h4><span>Afforestation Partner</span></div>
+      </div>
+
+      <div class="collab-card theme-ramogi">
+        <div class="collab-logo-wrap">
+          <img src="assets/images/ramogi.jpeg" alt="Ramogi TV & Radio" loading="lazy" />
+        </div>
+        <div class="collab-info"><h4>Ramogi TV &amp; Radio</h4><span>Media &amp; Advocacy Platform</span></div>
+      </div>
+
+      <div class="collab-card theme-courts">
+        <div class="collab-logo-wrap">
+          <img src="assets/images/judiciary.jpeg" alt="Kenya Courts" loading="lazy" />
+        </div>
+        <div class="collab-info"><h4>Kenya Courts</h4><span>Child Protection &amp; Mediation</span></div>
+      </div>
+
+      <div class="collab-card theme-kicd">
+        <div class="collab-logo-wrap">
+          <img src="assets/images/kicd.jpeg" alt="KICD" loading="lazy" />
+        </div>
+        <div class="collab-info"><h4>KICD</h4><span>Curriculum Development</span></div>
+      </div>
+
+      <div class="collab-card theme-shujaa">
+        <div class="collab-logo-wrap">
+          <img src="assets/images/shujaa.jpeg" alt="Shujaa Awards" loading="lazy" />
+        </div>
+        <div class="collab-info"><h4>Shujaa Awards</h4><span>National Philanthropy Recognition</span></div>
+      </div>
+
+      <div class="collab-card theme-partner" onclick="window.location.href='contact.html'">
+        <div class="collab-logo-wrap">
+          <div class="fallback-icon"><i class="fa-solid fa-plus"></i></div>
+        </div>
+        <div class="collab-info">
+          <h4>Become a Partner</h4>
+          <span style="color:var(--gold);">Join our network →</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 
@@ -488,6 +560,18 @@
 <!-- ═══════════════════ FOOTER ═══════════════════ -->
 <footer>
   <div class="container">
+        <div class="footer-newsletter reveal">
+          <div class="footer-newsletter-text">
+            <h3>Subscribe to our Newsletter</h3>
+            <p>Stay updated on our latest impact stories, programs, and ways to help.</p>
+          </div>
+          <form action="https://formsubmit.co/deshafointergrated@gmail.com" method="POST" class="footer-newsletter-form">
+            <input type="hidden" name="_subject" value="New Newsletter Subscriber!">
+            <input type="text" name="_honey" style="display:none">
+            <input type="email" name="email" placeholder="Your email address" required />
+            <button type="submit" class="btn btn-gold" style="border-radius: var(--radius-pill); padding: 12px 28px;">Subscribe <i class="fa-regular fa-paper-plane"></i></button>
+          </form>
+        </div>
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="assets/images/logo.png" alt="DESHAFO" style="width:72px;border-radius:50%;border:2px solid var(--gold);" />

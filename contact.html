@@ -25,6 +25,50 @@
         font-size: 16px !important;
       }
     }
+
+    /* Fun & Interactive Elements */
+    .contact-info-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-info-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md) !important;
+    }
+    .contact-info-card::before {
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+      transition: width 0.3s ease;
+    }
+    .contact-info-card.c-location::before { background: var(--green); }
+    .contact-info-card.c-email::before { background: var(--gold); }
+    .contact-info-card.c-social::before { background: var(--blue); }
+    
+    .btn-send i { transition: transform 0.3s ease; }
+    .btn-send:hover i { transform: translate(4px, -4px); }
+    
+    .waving-hand {
+      display: inline-block;
+      animation: wave-animation 2.5s infinite;
+      transform-origin: 70% 70%;
+    }
+    @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+      10% { transform: rotate(14.0deg) }
+      20% { transform: rotate(-8.0deg) }
+      30% { transform: rotate(14.0deg) }
+      40% { transform: rotate(-4.0deg) }
+      50% { transform: rotate(10.0deg) }
+      60%, 100% { transform: rotate( 0.0deg) }
+    }
+
+    .bg-shape { position: absolute; z-index: 0; opacity: 0.6; pointer-events: none; animation: floatAnim 6s ease-in-out infinite; }
+    .bg-shape.delay-1 { animation-delay: -2s; }
+    .bg-shape.delay-2 { animation-delay: -4s; }
+    @keyframes floatAnim {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(10deg); }
+    }
   </style>
 </head>
 <body>
@@ -34,8 +78,8 @@
   <nav class="navbar">
     <div class="nav-left"><a href="index.html">Home</a><a href="about.html">About</a><a href="programs.html">Programs</a><a href="gallery.html">Gallery</a></div>
     <div class="nav-logo"><a href="index.html"><img src="assets/images/logo.png" alt="DESHAFO" /></a></div>
-    <div class="nav-right"><a href="contact.html" class="active">Contact</a><a href="donations.html">Donate</a></div>
-    <div class="nav-auth"><a href="login.html" class="btn-login">Login</a><a href="signup.html" class="btn-signup">Join Us</a></div>
+    <div class="nav-right"><a href="founder.html">Founder</a><a href="contact.html" class="active">Contact</a></div>
+    <div class="nav-auth"><a href="donations.html" class="btn btn-gold" style="padding:8px 20px;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.5px;">Donate Now</a></div>
     <div class="hamburger"><span></span><span></span><span></span></div>
   </nav>
 </div>
@@ -55,30 +99,37 @@
 </div>
 
 <!-- CONTACT -->
-<section class="section-pad" style="background:var(--ivory);">
+<section class="section-pad" style="background:linear-gradient(180deg, var(--ivory) 0%, var(--ivory-dark) 100%); position:relative; overflow:hidden;">
+  
+  <!-- Decorative Background Shapes -->
+  <div class="bg-shape" style="top:5%; left:2%; width:150px; height:150px; background:radial-gradient(circle, rgba(217,178,76,0.3) 0%, transparent 70%);"></div>
+  <div class="bg-shape delay-1" style="bottom:10%; right:3%; width:250px; height:250px; background:radial-gradient(circle, rgba(15,106,60,0.2) 0%, transparent 70%);"></div>
+  <div class="bg-shape delay-2" style="top:40%; right:45%; width:120px; height:120px; background:radial-gradient(circle, rgba(44,143,214,0.15) 0%, transparent 70%);"></div>
+
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:60px;align-items:start;">
+    <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:60px;align-items:start;position:relative;z-index:1;">
 
       <!-- INFO -->
       <div class="reveal">
-        <h2 style="margin-bottom:32px;">Reach Us Directly</h2>
+        <h2 style="margin-bottom:32px; background:linear-gradient(90deg, var(--green-deep), var(--green)); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Reach Us Directly</h2>
 
         <div style="display:flex;flex-direction:column;gap:20px;margin-bottom:40px;">
-          <div style="display:flex;gap:16px;align-items:flex-start;background:var(--white);padding:20px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);border:1.5px solid rgba(15,106,60,0.08);">
+          <div class="contact-info-card c-location" style="display:flex;gap:16px;align-items:flex-start;background:var(--white);padding:20px 24px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);border:1px solid rgba(15,106,60,0.08);">
             <div style="width:44px;height:44px;min-width:44px;background:rgba(15,106,60,0.1);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
             <div>
               <strong style="font-family:var(--font-head);font-size:0.9rem;display:block;margin-bottom:4px;">Our Location</strong>
               <p style="font-size:0.9rem;">Outbram Village, Central Ward<br/>Homabay Town Sub-county<br/>Homabay County, Kenya</p>
             </div>
           </div>
-          <div style="display:flex;gap:16px;align-items:flex-start;background:var(--white);padding:20px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);border:1.5px solid rgba(15,106,60,0.08);">
+          <div class="contact-info-card c-email" style="display:flex;gap:16px;align-items:flex-start;background:var(--white);padding:20px 24px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);border:1px solid rgba(15,106,60,0.08);">
             <div style="width:44px;height:44px;min-width:44px;background:rgba(217,178,76,0.12);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
             <div>
-              <strong style="font-family:var(--font-head);font-size:0.9rem;display:block;margin-bottom:4px;">Founder — Rolex Ong'ute</strong>
-              <p style="font-size:0.9rem;"><a href="mailto:iddyrolex@yahoo.com" style="color:var(--green);font-weight:600;">iddyrolex@yahoo.com</a></p>
+              <strong style="font-family:var(--font-head);font-size:0.9rem;display:block;margin-bottom:4px;">Email Addresses</strong>
+              <p style="font-size:0.9rem;margin-bottom:8px;">CBO Official: <a href="mailto:deshafointergrated@gmail.com" style="color:var(--green);font-weight:600;">deshafointergrated@gmail.com</a></p>
+              <p style="font-size:0.9rem;">Founder: <a href="mailto:iddyrolex@yahoo.com" style="color:var(--green);font-weight:600;">iddyrolex@yahoo.com</a></p>
             </div>
           </div>
-          <div style="display:flex;gap:16px;align-items:flex-start;background:var(--white);padding:20px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);border:1.5px solid rgba(15,106,60,0.08);">
+          <div class="contact-info-card c-social" style="display:flex;gap:16px;align-items:flex-start;background:var(--white);padding:20px 24px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);border:1px solid rgba(15,106,60,0.08);">
             <div style="width:44px;height:44px;min-width:44px;background:rgba(44,143,214,0.1);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
             <div>
               <strong style="font-family:var(--font-head);font-size:0.9rem;display:block;margin-bottom:4px;">Social Media</strong>
@@ -87,18 +138,17 @@
           </div>
         </div>
 
-        <!-- Map placeholder -->
-        <div style="border-radius:var(--radius-md);overflow:hidden;height:240px;background:linear-gradient(135deg,#e8f5ee,#c8e8d4);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;border:1.5px solid rgba(15,106,60,0.15);">
-          <div style="font-size:3rem;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></div>
-          <p style="color:var(--green);font-family:var(--font-head);font-weight:700;font-size:0.9rem;">Outbram Village, Homabay County</p>
-          <p style="font-size:0.8rem;color:var(--text-light);">Map embed coming soon</p>
+        <!-- Real Google Map -->
+        <div style="border-radius:var(--radius-md);overflow:hidden;height:320px;box-shadow:var(--shadow-sm);border:1.5px solid rgba(15,106,60,0.15);position:relative;background:var(--white);">
+          <iframe src="https://maps.google.com/maps?q=Homabay%20Town,%20Kenya&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
 
       <!-- FORM -->
       <div class="reveal reveal-delay-1">
-        <div style="background:var(--white);border-radius:var(--radius-lg);padding:48px 40px;box-shadow:var(--shadow-md);border:1.5px solid rgba(15,106,60,0.1);">
-          <h3 style="margin-bottom:8px;">Send Us a Message</h3>
+        <div style="background:var(--white);border-radius:var(--radius-lg);padding:48px 40px;box-shadow:0 20px 60px rgba(10,78,45,0.08);border:1px solid rgba(15,106,60,0.08);border-top:6px solid var(--green);position:relative;">
+          <div style="position:absolute;top:0;right:0;width:150px;height:150px;background:radial-gradient(circle, rgba(217,178,76,0.12) 0%, transparent 70%);border-radius:50%;transform:translate(30%,-30%);pointer-events:none;"></div>
+          <h3 style="margin-bottom:8px;font-size:1.8rem;">Send Us a Message <span class="waving-hand">👋</span></h3>
           <p style="margin-bottom:28px;font-size:0.92rem;">Whether it's a partnership inquiry, volunteer interest, or a simple hello — we read every message.</p>
           <form action="https://formsubmit.co/deshafointergrated@gmail.com" method="POST">
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
@@ -136,7 +186,7 @@
               <label>Message</label>
               <textarea name="message" placeholder="How can we help you? Or how can you help us?" rows="5" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" style="width:100%;font-size:1rem;">Send Message →</button>
+            <button type="submit" class="btn btn-primary btn-send" style="width:100%;font-size:1.05rem;justify-content:center;gap:12px;padding:16px;">Send Message <i class="fa-regular fa-paper-plane"></i></button>
           </form>
         </div>
       </div>
@@ -147,6 +197,18 @@
 <!-- FOOTER -->
 <footer>
   <div class="container">
+    <div class="footer-newsletter reveal">
+      <div class="footer-newsletter-text">
+        <h3>Subscribe to our Newsletter</h3>
+        <p>Stay updated on our latest impact stories, programs, and ways to help.</p>
+      </div>
+      <form action="https://formsubmit.co/deshafointergrated@gmail.com" method="POST" class="footer-newsletter-form">
+        <input type="hidden" name="_subject" value="New Newsletter Subscriber!">
+        <input type="text" name="_honey" style="display:none">
+        <input type="email" name="email" placeholder="Your email address" required />
+        <button type="submit" class="btn btn-gold" style="border-radius: var(--radius-pill); padding: 12px 28px;">Subscribe <i class="fa-regular fa-paper-plane"></i></button>
+      </form>
+    </div>
     <div class="footer-grid">
       <div class="footer-brand"><img src="assets/images/logo.png" alt="DESHAFO" style="width:72px;border-radius:50%;border:2px solid var(--gold);" /><p>DESHAFO Integrated CBO — empowering communities in Homabay County, Kenya since 2019.</p><div class="social-links"><a href="https://www.facebook.com/iddyrolex" target="_blank">f</a><a href="https://www.linkedin.com/in/rolex-ong-ute" target="_blank">in</a></div></div>
       <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="founder.html">Our Founder</a></li><li><a href="programs.html">Programs</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>

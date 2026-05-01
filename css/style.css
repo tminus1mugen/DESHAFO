@@ -445,6 +445,54 @@ footer::before {
   background: linear-gradient(90deg, var(--gold), var(--orange), var(--gold));
 }
 
+.footer-newsletter {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(217,178,76,0.15);
+  border-radius: var(--radius-lg);
+  padding: 40px 48px;
+  margin-bottom: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+.footer-newsletter-text h3 {
+  color: var(--gold-light);
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+}
+.footer-newsletter-text p {
+  color: rgba(255,255,255,0.7);
+  margin: 0;
+  font-size: 0.95rem;
+}
+.footer-newsletter-form {
+  display: flex;
+  width: 100%;
+  max-width: 440px;
+  gap: 12px;
+}
+.footer-newsletter-form input {
+  flex: 1;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  border: 2px solid transparent;
+  outline: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  background: rgba(255,255,255,0.9);
+  transition: var(--transition);
+}
+.footer-newsletter-form input:focus {
+  border-color: var(--gold);
+  background: var(--white);
+}
+@media (max-width: 768px) {
+  .footer-newsletter { flex-direction: column; align-items: flex-start; padding: 32px 24px; gap: 24px; }
+  .footer-newsletter-form { flex-direction: column; max-width: 100%; }
+  .footer-newsletter-form button { width: 100%; justify-content: center; }
+}
+
 .footer-grid {
   display: grid;
   grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
@@ -660,6 +708,137 @@ footer::before {
 /* .hero-visual now defined in ORBIT SYSTEM section below */
 
 /* concept-node styles removed — replaced by orbit-node system */
+
+/* ── Collaborators Grid ── */
+.collaborators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+.collab-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0,0,0,0.04);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.collab-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  border-color: transparent;
+}
+.collab-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+.collab-card:hover::before {
+  opacity: 1;
+}
+.collab-logo-wrap {
+  width: 80px; height: 80px;
+  position: relative;
+  margin-bottom: 4px;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 2;
+}
+/* The Bleeding Hue Effect */
+.collab-logo-wrap::after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  filter: blur(15px);
+  z-index: -1;
+  opacity: 0.5;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.collab-card:hover .collab-logo-wrap::after {
+  opacity: 0.85;
+  transform: scale(1.2);
+}
+.collab-logo-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+  background: var(--white);
+}
+.collab-card:hover .collab-logo-wrap img {
+  transform: scale(1.15) rotate(4deg);
+}
+.collab-logo-wrap .fallback-icon {
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+  background: var(--white);
+}
+.collab-card:hover .collab-logo-wrap .fallback-icon {
+  transform: scale(1.15) rotate(-4deg);
+}
+.collab-info h4 {
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+  color: var(--green-deep);
+  transition: color 0.3s ease;
+}
+.collab-info span {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.2;
+  display: block;
+}
+
+/* ── Colorful Brand Themes ── */
+.theme-mosa::before { background: linear-gradient(to bottom, rgba(244,166,58,0.1) 0%, transparent 100%); }
+.theme-mosa .collab-logo-wrap::after { background: var(--orange); }
+.theme-mosa:hover h4, .theme-mosa .fallback-icon { color: var(--orange); }
+
+.theme-coke::before { background: linear-gradient(to bottom, rgba(244,0,9,0.1) 0%, transparent 100%); }
+.theme-coke .collab-logo-wrap::after { background: #F40009; }
+.theme-coke:hover h4 { color: #F40009; }
+
+.theme-kfs::before { background: linear-gradient(to bottom, rgba(15,106,60,0.1) 0%, transparent 100%); }
+.theme-kfs .collab-logo-wrap::after { background: var(--green); }
+.theme-kfs:hover h4 { color: var(--green); }
+
+.theme-ramogi::before { background: linear-gradient(to bottom, rgba(44,143,214,0.1) 0%, transparent 100%); }
+.theme-ramogi .collab-logo-wrap::after { background: var(--blue); }
+.theme-ramogi:hover h4 { color: var(--blue); }
+
+.theme-courts::before { background: linear-gradient(to bottom, rgba(10,78,45,0.1) 0%, transparent 100%); }
+.theme-courts .collab-logo-wrap::after { background: var(--green-deep); }
+.theme-courts:hover h4 { color: var(--green-deep); }
+
+.theme-kicd::before { background: linear-gradient(to bottom, rgba(217,178,76,0.15) 0%, transparent 100%); }
+.theme-kicd .collab-logo-wrap::after { background: var(--gold); }
+.theme-kicd:hover h4 { color: #b8953b; }
+
+.theme-shujaa::before { background: linear-gradient(to bottom, rgba(103,58,183,0.1) 0%, transparent 100%); }
+.theme-shujaa .collab-logo-wrap::after { background: #673ab7; }
+.theme-shujaa:hover h4 { color: #673ab7; }
+
+.theme-partner { border: 2px dashed rgba(15,106,60,0.2) !important; cursor: pointer; }
+.theme-partner::before { background: linear-gradient(to bottom, rgba(15,106,60,0.05) 0%, transparent 100%); }
+.theme-partner .collab-logo-wrap::after { background: var(--green); }
+.theme-partner:hover h4, .theme-partner .fallback-icon { color: var(--green); }
+.theme-partner:hover { border-color: var(--green) !important; }
 
 /* ── Mission Cards ── */
 .mission-grid {
