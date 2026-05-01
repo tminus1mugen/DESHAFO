@@ -276,3 +276,67 @@ document.addEventListener('DOMContentLoaded', () => {
   // Run page features on first load
   initPageFeatures();
 });
+
+/* ─────────────────────────────────────────────────
+   GLOBAL LIGHTBOX FUNCTIONS
+   ───────────────────────────────────────────────── */
+window.openLightbox = function(id, title) {
+  const lb = document.getElementById('lightbox');
+  if (!lb) return;
+  const inner = document.querySelector('.lightbox-inner');
+  const imageMap = {
+    'deshafoteens': 'assets/images/deshafoteens.jpeg',
+    'community2': 'assets/images/community2.jpeg',
+    'photo2': 'assets/images/photo2.jpeg',
+    'photo3': 'assets/images/photo3.jpeg',
+    'foodsec': 'assets/images/foodsec.jpeg',
+    'foodsec2': 'assets/images/foodsec2.jpeg',
+    'vid': 'assets/images/vid.mp4',
+    'wash': 'assets/images/wash.jpeg',
+    'wash2': 'assets/images/wash2.jpeg'
+  };
+  
+  const src = imageMap[id];
+  inner.innerHTML = '';
+  
+  if (src && src.endsWith('.mp4')) {
+    const vid = document.createElement('video');
+    vid.src = src;
+    vid.controls = true;
+    vid.autoplay = true;
+    vid.className = 'lightbox-img';
+    inner.appendChild(vid);
+  } else {
+    const img = document.createElement('img');
+    img.src = src || 'assets/images/photo1.jpg';
+    img.alt = title;
+    img.className = 'lightbox-img';
+    inner.appendChild(img);
+  }
+  
+  const caption = document.createElement('div');
+  caption.className = 'lightbox-caption';
+  caption.innerText = title;
+  inner.appendChild(caption);
+
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+};
+
+window.closeLightbox = function() {
+  const lb = document.getElementById('lightbox');
+  if (lb) {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+    const inner = document.querySelector('.lightbox-inner');
+    if (inner) inner.innerHTML = ''; // Stop video playing when closed
+  }
+};
+
+document.addEventListener('click', function(e) {
+  if (e.target && e.target.id === 'lightbox') window.closeLightbox();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') window.closeLightbox();
+});
