@@ -280,23 +280,32 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ─────────────────────────────────────────────────
    GLOBAL LIGHTBOX FUNCTIONS
    ───────────────────────────────────────────────── */
+const galleryOrder = [
+  { id: 'deshafoteens', src: 'assets/images/deshafoteens.jpeg', title: 'Deshafo Teens and MOSA Youth join forces for a shoreline clean-up at the Lake Victoria Pier in Homabay.' },
+  { id: 'community2', src: 'assets/images/community2.jpeg', title: 'Community women accessing clean, solar-pumped water from the newly drilled borehole at Deshafo Integrated School.' },
+  { id: 'photo2', src: 'assets/images/photo2.jpeg', title: 'Learners practicing proper hand hygiene with running water after their environmental conservation activities.' },
+  { id: 'photo3', src: 'assets/images/photo3.jpeg', title: 'Instilling lifelong health and hygiene practices through post-activity handwashing.' },
+  { id: 'foodsec', src: 'assets/images/foodsec.jpeg', title: 'Food Security in Action: Drilled water enables students to plant and nurture their own crops in the school garden.' },
+  { id: 'foodsec2', src: 'assets/images/foodsec2.jpeg', title: 'Harvest Time: Reaping the benefits of sustainable agriculture and reliable water access at the school.' },
+  { id: 'vid', src: 'assets/images/vid.mp4', title: 'Practical Learning: Students engage in hands-on education about the nutritional value of the foods they cultivate.' },
+  { id: 'wash', src: 'assets/images/wash.jpeg', title: 'Promoting health and hygiene during the DESHAFO Character & Purpose Mentorship Program.' },
+  { id: 'wash2', src: 'assets/images/wash2.jpeg', title: 'Mentorship participants washing hands, reinforcing the importance of sanitation in youth development.' }
+];
+
+let currentLbIndex = 0;
+
 window.openLightbox = function(id, title) {
   const lb = document.getElementById('lightbox');
   if (!lb) return;
   const inner = document.querySelector('.lightbox-inner');
-  const imageMap = {
-    'deshafoteens': 'assets/images/deshafoteens.jpeg',
-    'community2': 'assets/images/community2.jpeg',
-    'photo2': 'assets/images/photo2.jpeg',
-    'photo3': 'assets/images/photo3.jpeg',
-    'foodsec': 'assets/images/foodsec.jpeg',
-    'foodsec2': 'assets/images/foodsec2.jpeg',
-    'vid': 'assets/images/vid.mp4',
-    'wash': 'assets/images/wash.jpeg',
-    'wash2': 'assets/images/wash2.jpeg'
-  };
   
-  const src = imageMap[id];
+  let src = null;
+  const idx = galleryOrder.findIndex(item => item.id === id);
+  if (idx !== -1) {
+    currentLbIndex = idx;
+    src = galleryOrder[idx].src;
+    title = title || galleryOrder[idx].title;
+  }
   inner.innerHTML = '';
   
   if (src && src.endsWith('.mp4')) {
@@ -338,5 +347,17 @@ document.addEventListener('click', function(e) {
 });
 
 document.addEventListener('keydown', (e) => {
+  const lb = document.getElementById('lightbox');
+  if (!lb || !lb.classList.contains('open')) return;
+  
   if (e.key === 'Escape') window.closeLightbox();
+  if (e.key === 'ArrowLeft') window.navigateLightbox(-1);
+  if (e.key === 'ArrowRight') window.navigateLightbox(1);
 });
+
+window.navigateLightbox = function(direction) {
+  if (!galleryOrder.length) return;
+  currentLbIndex = (currentLbIndex + direction + galleryOrder.length) % galleryOrder.length;
+  const next = galleryOrder[currentLbIndex];
+  window.openLightbox(next.id, next.title);
+};
