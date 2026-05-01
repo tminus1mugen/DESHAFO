@@ -1696,24 +1696,25 @@ footer::before {
 
 .lightbox-close {
   position: absolute;
-  top: 24px;
-  left: 24px;
+  top: max(16px, env(safe-area-inset-top, 16px));
+  left: max(16px, env(safe-area-inset-left, 16px));
   right: auto;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.4);
   border-radius: var(--radius-pill);
   color: var(--white);
   font-size: 1rem;
   font-weight: 600;
   font-family: var(--font-head);
-  padding: 8px 20px;
+  padding: 10px 24px;
   cursor: pointer;
   transition: var(--transition);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  z-index: 10;
+  z-index: 9999;
+  backdrop-filter: blur(8px);
 }
 
 .lightbox-close:hover {
@@ -1759,6 +1760,9 @@ footer::before {
 @media (max-width: 768px) {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery-card, .gallery-card-tall, .gallery-card-wide, .gallery-card-large {
+    aspect-ratio: auto !important;
   }
   .gallery-card-tall .gallery-card-inner img { height: 280px; }
   .gallery-card-wide .gallery-card-inner img { height: 200px; }
