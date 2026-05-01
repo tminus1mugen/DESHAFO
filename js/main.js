@@ -92,7 +92,7 @@
     const href = a.getAttribute('href');
     if (!href || href.startsWith('http') || href.startsWith('//') ||
         href.startsWith('mailto:') || href.startsWith('tel:') ||
-        href.startsWith('#') || SKIP_EXTS.test(href)) return;
+        href.startsWith('javascript:') || href.startsWith('#') || SKIP_EXTS.test(href)) return;
     e.preventDefault();
     // Close mobile menu
     document.querySelector('.hamburger')?.classList.remove('open');
