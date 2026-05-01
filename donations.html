@@ -152,18 +152,18 @@
           </div>
           <div class="mpesa-step">
             <div class="mpesa-step-num">3</div>
-            <p>Enter Business Number: <strong style="color:var(--gold-light);">Coming Soon</strong></p>
+            <p>Enter Business Number: <strong style="color:var(--gold-light);">247247</strong></p>
           </div>
           <div class="mpesa-step">
             <div class="mpesa-step-num">4</div>
-            <p>Account Number: <strong style="color:var(--gold-light);">DESHAFO</strong></p>
+            <p>Account Number: <strong style="color:var(--gold-light);">926063</strong></p>
           </div>
           <div class="mpesa-step">
             <div class="mpesa-step-num">5</div>
             <p>Enter your amount and confirm with your PIN</p>
           </div>
           <div style="background:rgba(217,178,76,0.15);border:1.5px solid rgba(217,178,76,0.3);border-radius:var(--radius-sm);padding:16px;margin-top:16px;">
-            <p style="font-size:0.85rem;color:rgba(255,255,255,0.6);">M-PESA Paybill details will be updated soon. Contact us directly to donate.</p>
+            <p style="font-size:0.85rem;color:rgba(255,255,255,0.8);">Thank you for your generous support. Every contribution makes a difference!</p>
           </div>
         </div>
       </div>
@@ -172,24 +172,24 @@
       <div class="reveal reveal-delay-1">
         <div class="donate-card" style="margin-bottom:24px;">
           <h3 style="margin-bottom:20px;">Bank Transfer</h3>
-          <div class="bank-detail"><span>Bank Name</span><span>Coming Soon</span></div>
-          <div class="bank-detail"><span>Account Name</span><span>DESHAFO Integrated CBO</span></div>
-          <div class="bank-detail"><span>Account Number</span><span>Coming Soon</span></div>
-          <div class="bank-detail"><span>Branch</span><span>Homabay Branch</span></div>
-          <p style="font-size:0.85rem;color:var(--text-light);margin-top:16px;">Bank details will be updated soon. Contact us for immediate assistance.</p>
+          <div class="bank-detail" style="display:flex;justify-content:space-between;margin-bottom:8px;"><span>Bank Name</span><strong>Equity Bank</strong></div>
+          <div class="bank-detail" style="display:flex;justify-content:space-between;margin-bottom:8px;"><span>Account Name</span><strong>DESHAFO INTEGRATED CBO</strong></div>
+          <div class="bank-detail" style="display:flex;justify-content:space-between;margin-bottom:8px;"><span>Account Number</span><strong>0980185399367</strong></div>
+          <div class="bank-detail" style="display:flex;justify-content:space-between;margin-bottom:8px;"><span>Branch</span><strong>Homabay Branch</strong></div>
+          <p style="font-size:0.85rem;color:var(--text-light);margin-top:16px;">Securely transfer funds directly to our organization account.</p>
         </div>
 
         <div class="donate-card">
           <h3 style="margin-bottom:8px;">Send a Message</h3>
           <p style="margin-bottom:24px;font-size:0.92rem;">Let us know about your donation intention and we'll follow up directly.</p>
-          <form>
+        <form action="https://formsubmit.co/atikaemmanuel366@gmail.com" method="POST">
             <div class="form-group">
               <label>Your Name</label>
-              <input type="text" placeholder="e.g. Jane Achieng" required />
+            <input type="text" name="name" placeholder="e.g. Jane Achieng" required />
             </div>
             <div class="form-group">
               <label>Phone / Email</label>
-              <input type="text" placeholder="07XX XXX XXX or email@example.com" required />
+            <input type="text" name="contact_info" placeholder="07XX XXX XXX or email@example.com" required />
             </div>
             <div class="form-group">
               <label>Amount (KES)</label>
@@ -201,11 +201,11 @@
                 <div class="amount-btn" onclick="selectAmount(this,'10000')">10,000</div>
                 <div class="amount-btn" onclick="selectAmount(this,'')">Other</div>
               </div>
-              <input type="number" id="amount-input" placeholder="Or enter custom amount" style="margin-top:8px;" />
+            <input type="number" name="amount" id="amount-input" placeholder="Or enter custom amount" style="margin-top:8px;" />
             </div>
             <div class="form-group">
               <label>Message (optional)</label>
-              <textarea placeholder="E.g. This is for the GRETECHI Conference 2025"></textarea>
+            <textarea name="message" placeholder="E.g. This is for the GRETECHI Conference 2025"></textarea>
             </div>
             <button type="submit" class="btn btn-primary" style="width:100%;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="flex-shrink:0;vertical-align:middle;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> Submit Donation Intent</button>
           </form>

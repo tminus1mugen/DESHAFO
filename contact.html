@@ -75,7 +75,7 @@
             <div style="width:44px;height:44px;min-width:44px;background:rgba(217,178,76,0.12);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
             <div>
               <strong style="font-family:var(--font-head);font-size:0.9rem;display:block;margin-bottom:4px;">Founder — Rolex Ong'ute</strong>
-              <p style="font-size:0.9rem;">Contact available upon request</p>
+              <p style="font-size:0.9rem;"><a href="mailto:atikaemmanuel366@gmail.com" style="color:var(--green);font-weight:600;">atikaemmanuel366@gmail.com</a></p>
             </div>
           </div>
           <div style="display:flex;gap:16px;align-items:flex-start;background:var(--white);padding:20px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);border:1.5px solid rgba(15,106,60,0.08);">
@@ -100,28 +100,28 @@
         <div style="background:var(--white);border-radius:var(--radius-lg);padding:48px 40px;box-shadow:var(--shadow-md);border:1.5px solid rgba(15,106,60,0.1);">
           <h3 style="margin-bottom:8px;">Send Us a Message</h3>
           <p style="margin-bottom:28px;font-size:0.92rem;">Whether it's a partnership inquiry, volunteer interest, or a simple hello — we read every message.</p>
-          <form>
+          <form action="https://formsubmit.co/atikaemmanuel366@gmail.com" method="POST">
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
               <div class="form-group">
                 <label>First Name</label>
-                <input type="text" placeholder="Jane" required />
+                <input type="text" name="first_name" placeholder="Jane" required />
               </div>
               <div class="form-group">
                 <label>Last Name</label>
-                <input type="text" placeholder="Achieng" required />
+                <input type="text" name="last_name" placeholder="Achieng" required />
               </div>
             </div>
             <div class="form-group">
               <label>Email Address</label>
-              <input type="email" placeholder="you@example.com" required />
+              <input type="email" name="email" placeholder="you@example.com" required />
             </div>
             <div class="form-group">
               <label>Phone (optional)</label>
-              <input type="tel" placeholder="07XX XXX XXX" />
+              <input type="tel" name="phone" placeholder="07XX XXX XXX" />
             </div>
             <div class="form-group">
               <label>Subject</label>
-              <select>
+              <select name="subject">
                 <option value="">Select a reason...</option>
                 <option>General Inquiry</option>
                 <option>Partnership Opportunity</option>
@@ -134,7 +134,7 @@
             </div>
             <div class="form-group">
               <label>Message</label>
-              <textarea placeholder="How can we help you? Or how can you help us?" rows="5" required></textarea>
+              <textarea name="message" placeholder="How can we help you? Or how can you help us?" rows="5" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary" style="width:100%;font-size:1rem;">Send Message →</button>
           </form>

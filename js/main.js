@@ -176,12 +176,22 @@ function initForms() {
   document.querySelectorAll('form:not([data-bound])').forEach(form => {
     form.setAttribute('data-bound', '');
     form.addEventListener('submit', e => {
+      const action = form.getAttribute('action');
+      
+      // Allow native submission for FormSubmit so activation and CAPTCHA work correctly
+      if (action && action.includes('formsubmit.co')) {
+        const btn = form.querySelector('[type="submit"]');
+        if (btn) btn.innerHTML = 'Redirecting...';
+        return; 
+      }
+
       e.preventDefault();
       const btn = form.querySelector('[type="submit"]');
       if (!btn) return;
       const orig = btn.innerHTML;
       btn.innerHTML = '✓ Submitted!';
       btn.style.cssText = 'background:var(--green);color:#fff;';
+      form.reset();
       setTimeout(() => { btn.innerHTML = orig; btn.style.cssText = ''; }, 2500);
     });
   });
