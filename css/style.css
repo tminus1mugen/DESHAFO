@@ -1796,11 +1796,12 @@ footer::before {
   .gallery-card-wide, .gallery-card-large {
     grid-column: span 2 !important;
   }
-  .gallery-card-tall .gallery-card-inner img { height: 280px; }
-  .gallery-card-wide .gallery-card-inner img { height: 200px; }
-  .gallery-card-large .gallery-card-inner img { height: 340px; }
+  .gallery-card .gallery-card-inner img { height: 100% !important; }
+  .gallery-card-tall .gallery-card-inner img { min-height: 280px; }
+  .gallery-card-wide .gallery-card-inner img { min-height: 200px; }
+  .gallery-card-large .gallery-card-inner img { min-height: 340px; }
   .gallery-card:not(.gallery-card-tall):not(.gallery-card-wide):not(.gallery-card-large) .gallery-card-inner img {
-    height: 220px;
+    min-height: 220px;
   }
   .lightbox-inner { max-height: 85vh; }
   .lightbox-img { max-height: 60vh; }
