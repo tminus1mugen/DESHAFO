@@ -141,19 +141,19 @@ function initScrollReveal() {
       }
     });
   }, {
-    threshold: 0.05,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.02,
+    rootMargin: '0px 0px -20px 0px'
   });
-  // Trigger immediately for elements already in viewport on load
+  // Immediate check for elements in viewport
   setTimeout(() => {
     els.forEach(el => {
       const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
+      if (rect.top < window.innerHeight + 100) {
         el.classList.add('visible');
         obs.unobserve(el);
       }
     });
-  }, 100);
+  }, 50);
   els.forEach(el => obs.observe(el));
 }
 
