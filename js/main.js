@@ -66,10 +66,16 @@
       // Swap page-specific styles
       document.querySelectorAll('style[data-spa]').forEach(s => s.remove());
       if (styles) {
-        const el = document.createElement('div');
-        el.setAttribute('data-spa', '');
-        el.innerHTML = styles;
-        document.head.appendChild(el);
+        // Parse the styles HTML string and create proper style elements
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = styles;
+        const styleElements = tempDiv.querySelectorAll('style');
+        styleElements.forEach(origStyle => {
+          const newStyle = document.createElement('style');
+          newStyle.setAttribute('data-spa', '');
+          newStyle.textContent = origStyle.textContent;
+          document.head.appendChild(newStyle);
+        });
       }
       main.innerHTML = '';
       if (frag) main.appendChild(frag);
