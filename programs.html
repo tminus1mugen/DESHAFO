@@ -40,8 +40,11 @@
 
       <!-- 1 Education & Mentorship -->
       <div class="program-full reveal">
-        <div class="program-icon-block" style="background:linear-gradient(135deg,#e8f5ee,#c8e8d4);">
-          <i class="fa-solid fa-graduation-cap" style="font-size:120px;color:var(--green-mid); display:block;"></i>
+        <div class="program-images-grid">
+          <div class="program-img-item"><img src="assets/images/edu1.jpeg" alt="Education Mentorship" loading="lazy"/></div>
+          <div class="program-img-item"><img src="assets/images/edu2.jpeg" alt="Academic Support" loading="lazy"/></div>
+          <div class="program-img-item"><img src="assets/images/edu3.jpeg" alt="Talent Identification" loading="lazy"/></div>
+          <div class="program-img-item"><img src="assets/images/edu4.jpeg" alt="Career Pathway Mapping" loading="lazy"/></div>
         </div>
         <div class="program-detail">
          <span class="badge">Program 01</span>
@@ -59,8 +62,10 @@
 
       <!-- 2 Climate Action -->
       <div class="program-full reveal" id="climate">
-        <div class="program-icon-block" style="background:linear-gradient(135deg,#e8f5e9,#a5d6a7);">
-          <i class="fa-solid fa-leaf" style="font-size:120px;color:var(--green); display:block;"></i>
+        <div class="program-images-grid">
+          <div class="program-img-item"><img src="assets/images/climm1.jpeg" alt="Tree planting" loading="lazy"/></div>
+          <div class="program-img-item"><img src="assets/images/climm2.jpeg" alt="Climate education" loading="lazy"/></div>
+          <div class="program-img-item span-full"><img src="assets/images/climm3.jpeg" alt="Sustainable agriculture" loading="lazy"/></div>
         </div>
         <div class="program-detail">
          <span class="badge">Program 02</span>
@@ -80,8 +85,10 @@
 
       <!-- 3 Teen Mother Support -->
       <div class="program-full reveal">
-        <div class="program-icon-block" style="background:linear-gradient(135deg,#fff3e0,#ffcc80);">
-          <i class="fa-solid fa-hand-holding-heart" style="font-size:120px;color:var(--orange); display:block;"></i>
+        <div class="program-images-grid">
+          <div class="program-img-item"><img src="assets/images/teen1.jpeg" alt="Teen Mother Support" loading="lazy"/></div>
+          <div class="program-img-item"><img src="assets/images/teen2.jpeg" alt="Teen Mother Reintegration" loading="lazy"/></div>
+          <div class="program-img-item span-full"><video src="assets/images/teenvid.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;"></video></div>
         </div>
         <div class="program-detail">
          <span class="badge">Program 03</span>
@@ -99,8 +106,11 @@
 
       <!-- 4 GRETECHI Conference -->
       <div class="program-full reveal">
-        <div class="program-icon-block" style="background:linear-gradient(135deg,#e3f2fd,#90caf9);">
-          <i class="fa-solid fa-users-rays" style="font-size:120px;color:var(--blue); display:block;"></i>
+        <div class="program-images-grid">
+          <div class="program-img-item"><img src="assets/images/gretech1.jpeg" alt="GRETECHI Conference" loading="lazy"/></div>
+          <div class="program-img-item"><img src="assets/images/gretech2.jpeg" alt="GRETECHI Activities" loading="lazy"/></div>
+          <div class="program-img-item"><img src="assets/images/gretech3.jpeg" alt="GRETECHI Mentorship" loading="lazy"/></div>
+          <div class="program-img-item"><img src="assets/images/gretech4.jpeg" alt="GRETECHI Gathering" loading="lazy"/></div>
         </div>
         <div class="program-detail">
          <span class="badge">Program 04 · Annual Event</span>
@@ -119,8 +129,11 @@
 
       <!-- 5 Community Reach & Leadership -->
       <div class="program-full reveal">
-        <div class="program-icon-block" style="background:linear-gradient(135deg,#fce4ec,#f8bbd0);">
-          <i class="fa-solid fa-people-group" style="font-size:120px;color:#e91e63; display:block;"></i>
+        <div class="program-images-grid">
+          <div class="program-img-item"><img src="assets/images/comm1.jpeg" alt="Community Leadership" loading="lazy"/></div>
+          <div class="program-img-item"><img src="assets/images/comm2.jpeg" alt="Community Outreach" loading="lazy"/></div>
+          <div class="program-img-item"><img src="assets/images/comm.jpeg" alt="Community Gathering" loading="lazy"/></div>
+          <div class="program-img-item"><img src="assets/images/community.jpg" alt="Community Engagement" loading="lazy"/></div>
         </div>
         <div class="program-detail">
          <span class="badge">Program 05</span>
@@ -186,7 +199,8 @@
     padding: 100px 0;
     border-bottom: 1px solid rgba(15,106,60,0.08);
   }
-  .program-full:nth-child(even) .program-icon-block {
+  .program-full:nth-child(even) .program-icon-block,
+  .program-full:nth-child(even) .program-images-grid {
     order: 2;
   }
   .program-full:last-child { border-bottom: none; }
@@ -213,6 +227,30 @@
   .program-full:hover .program-icon-block i {
     transform: scale(1.15) rotate(4deg);
   }
+
+  .program-images-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 16px;
+    width: 100%;
+    height: 100%;
+  }
+  .program-img-item {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(10,78,45,0.08);
+    position: relative;
+    min-height: 0;
+  }
+  .program-img-item.span-full { grid-column: 1 / -1; }
+  .program-img-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4,0,0.2,1);
+  }
+  .program-full:hover .program-img-item img { transform: scale(1.08); }
 
   .program-detail .badge {
     background: rgba(217,178,76,0.15);
@@ -271,13 +309,17 @@
       gap: 40px !important;
       padding: 60px 0 !important;
     }
-    .program-full:nth-child(even) .program-icon-block {
+    .program-full:nth-child(even) .program-icon-block,
+    .program-full:nth-child(even) .program-images-grid {
       order: 0 !important;
     }
     .program-icon-block {
       aspect-ratio: 16/10 !important;
       height: auto !important;
     }
+    .program-images-grid { gap: 12px; grid-template-rows: auto; }
+    .program-img-item { min-height: auto; aspect-ratio: 4/3; }
+    .program-img-item.span-full { aspect-ratio: 21/9; }
     .program-detail { text-align: left; }
   }
 </style>

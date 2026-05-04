@@ -289,7 +289,41 @@ const galleryOrder = [
   { id: 'foodsec2', src: 'assets/images/foodsec2.jpeg', title: 'Harvest Time: Reaping the benefits of sustainable agriculture and reliable water access at the school.' },
   { id: 'vid', src: 'assets/images/vid.mp4', title: 'Practical Learning: Students engage in hands-on education about the nutritional value of the foods they cultivate.' },
   { id: 'wash', src: 'assets/images/wash.jpeg', title: 'Promoting health and hygiene during the DESHAFO Character & Purpose Mentorship Program.' },
-  { id: 'wash2', src: 'assets/images/wash2.jpeg', title: 'Mentorship participants washing hands, reinforcing the importance of sanitation in youth development.' }
+  { id: 'wash2', src: 'assets/images/wash2.jpeg', title: 'Mentorship participants washing hands, reinforcing the importance of sanitation in youth development.' },
+  { id: 'edu1', src: 'assets/images/edu1.jpeg', title: 'Empowering children through CBC curriculum guidance and active learning.' },
+  { id: 'edu2', src: 'assets/images/edu2.jpeg', title: 'Students actively participating in an academic support session.' },
+  { id: 'edu3', src: 'assets/images/edu3.jpeg', title: 'Teacher and student sharing a joyful moment during an education session.' },
+  { id: 'edu4', src: 'assets/images/edu4.jpeg', title: 'Students gathered for an outdoor learning and assembly session.' },
+  { id: 'climm1', src: 'assets/images/climm1.jpeg', title: 'Youth climate ambassadors leading a local tree planting drive.' },
+  { id: 'climm2', src: 'assets/images/climm2.jpeg', title: 'Integrating climate literacy into practical school activities.' },
+  { id: 'climm3', src: 'assets/images/climm3.jpeg', title: 'Community-led climate action protecting local ecosystems.' },
+  { id: 'gretech1', src: 'assets/images/gretech1.jpeg', title: 'Children enthusiastically participating in outdoor games and dancing at the GRETECHI Conference.' },
+  { id: 'gretech2', src: 'assets/images/gretech2.jpeg', title: 'Children attentively listening during an outdoor teaching session under a tent at the GRETECHI Conference.' },
+  { id: 'gretech3', src: 'assets/images/gretech3.jpeg', title: 'Children showcasing their creative crafts and learning new skills with mentors.' },
+  { id: 'gretech4', src: 'assets/images/gretech4.jpeg', title: 'The official poster and invitation for the annual GRETECHI Conference.' },
+  { id: 'teen1', src: 'assets/images/teen1.jpeg', title: 'Empowering teen mothers through psychosocial counselling and peer support.' },
+  { id: 'teen2', src: 'assets/images/teen2.jpeg', title: 'School reintegration advocacy and life skills training for young mothers.' },
+  { id: 'teenvid', src: 'assets/images/teenvid.mp4', title: 'Video: Teen mother reintegration and community sensitization in action.' },
+  { id: 'comm1', src: 'assets/images/comm1.jpeg', title: 'Community outreach program engagement.' },
+  { id: 'comm2', src: 'assets/images/comm2.jpeg', title: 'Local community leadership and development.' },
+  { id: 'comm', src: 'assets/images/comm3.jpeg', title: 'Village Dialogue: A participatory community forum where residents voice their concerns, share success stories, and collaborate on local solutions for education, health, and climate resilience.' },
+  { id: 'community', src: 'assets/images/community.jpg', title: 'Community engagement and outreach.' },
+  { id: 'kidsvid', src: 'assets/images/kids.mp4', title: 'Video: Outdoor games and team-building at the GRETECHI Conference.' },
+  { id: 'gretech5vid', src: 'assets/images/gretech5.mp4', title: 'Video: Boarder registration day 1 at the GRETECHI Conference.' },
+  { id: 'sfpvid', src: 'assets/images/sfp.mp4', title: 'Video: School feeding program providing nutritious meals to students.' },
+  { id: 'tmpvid', src: 'assets/images/tmp.mp4', title: 'Video: Teen membership program orientation and activities.' },
+  { id: 'plvid', src: 'assets/images/pl.mp4', title: 'Video: Students engaged in hands-on practical lessons.' },
+  { id: 'tpvid', src: 'assets/images/tp.mp4', title: 'Video: Tree planting activity as part of our climate action program.' },
+  { id: 'tp2vid', src: 'assets/images/tp2.mp4', title: 'Video: Community-led tree planting in Homabay County.' },
+  { id: 'wash3vid', src: 'assets/images/wash3.mp4', title: 'Video: Pupils washing their hands.' },
+  { id: 'wash4vid', src: 'assets/images/wash4.mp4', title: 'Video: Teens washing their hands.' },
+  { id: 'kmvid', src: 'assets/images/km.mp4', title: 'Video: Kid mentorship program and celebrations.' },
+  { id: 'wsvid', src: 'assets/images/ws.mp4', title: 'Video: Final touches on the water supply project.' },
+  { id: 'ws2vid', src: 'assets/images/ws2.mp4', title: 'Video: Borehole drilling for sustainable water access.' },
+  { id: 'ficvid', src: 'assets/images/fic.mp4', title: 'Video: Pupils first in command.' },
+  { id: 'pwdvid', src: 'assets/images/PWD.mp4', title: 'Video: Teacher representing people with disabilities.' },
+  { id: 'ecdvid', src: 'assets/images/ECD.mp4', title: 'Video: ECD graduation ceremony 2025.' },
+  { id: 'sfvid', src: 'assets/images/sf.mp4', title: 'Video: School farm cultivation and agricultural learning.' }
 ];
 
 let currentLbIndex = 0;
@@ -298,7 +332,7 @@ window.openLightbox = function(id, title) {
   const lb = document.getElementById('lightbox');
   if (!lb) return;
   const inner = document.querySelector('.lightbox-inner');
-  
+
   let src = null;
   const idx = galleryOrder.findIndex(item => item.id === id);
   if (idx !== -1) {
@@ -307,7 +341,7 @@ window.openLightbox = function(id, title) {
     title = title || galleryOrder[idx].title;
   }
   inner.innerHTML = '';
-  
+
   if (src && src.endsWith('.mp4')) {
     const vid = document.createElement('video');
     vid.src = src;
@@ -322,7 +356,7 @@ window.openLightbox = function(id, title) {
     img.className = 'lightbox-img';
     inner.appendChild(img);
   }
-  
+
   const caption = document.createElement('div');
   caption.className = 'lightbox-caption';
   caption.innerText = title;
