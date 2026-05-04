@@ -132,7 +132,7 @@
         <div class="program-images-grid">
           <div class="program-img-item"><img src="assets/images/comm1.jpeg" alt="Community Leadership" loading="lazy"/></div>
           <div class="program-img-item"><img src="assets/images/comm2.jpeg" alt="Community Outreach" loading="lazy"/></div>
-          <div class="program-img-item"><img src="assets/images/comm.jpeg" alt="Community Gathering" loading="lazy"/></div>
+           <div class="program-img-item"><img src="assets/images/comm3.jpeg" alt="Community Gathering" loading="lazy"/></div>
           <div class="program-img-item"><img src="assets/images/community.jpg" alt="Community Engagement" loading="lazy"/></div>
         </div>
         <div class="program-detail">
@@ -303,25 +303,60 @@
     margin-top: 2px;
   }
 
-  @media (max-width: 900px) {
-    .program-full {
-      grid-template-columns: 1fr !important;
-      gap: 40px !important;
-      padding: 60px 0 !important;
-    }
-    .program-full:nth-child(even) .program-icon-block,
-    .program-full:nth-child(even) .program-images-grid {
-      order: 0 !important;
-    }
-    .program-icon-block {
-      aspect-ratio: 16/10 !important;
-      height: auto !important;
-    }
-    .program-images-grid { gap: 12px; grid-template-rows: auto; }
-    .program-img-item { min-height: auto; aspect-ratio: 4/3; }
-    .program-img-item.span-full { aspect-ratio: 21/9; }
-    .program-detail { text-align: left; }
-  }
+   @media (max-width: 768px) {
+     .program-full {
+       grid-template-columns: 1fr !important;
+       gap: 32px !important;
+       padding: 48px 0 !important;
+     }
+     .program-full:nth-child(even) .program-images-grid,
+     .program-full:nth-child(even) .program-detail {
+       order: 0 !important;
+     }
+     .program-images-grid {
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       grid-template-rows: repeat(2, minmax(180px, auto));
+       gap: 12px;
+     }
+     .program-img-item {
+       aspect-ratio: 4/3;
+       border-radius: 12px;
+       overflow: hidden;
+     }
+     .program-img-item.span-full {
+       grid-column: 1 / -1;
+       aspect-ratio: 16/9;
+     }
+     .program-img-item img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       display: block;
+     }
+     .program-detail {
+       text-align: left;
+     }
+     .program-detail h2 {
+       font-size: 1.6rem;
+       margin-bottom: 16px;
+     }
+     .program-detail p {
+       font-size: 0.95rem;
+       line-height: 1.7;
+       margin-bottom: 20px;
+     }
+     .program-detail ul {
+       grid-template-columns: 1fr;
+       gap: 10px;
+     }
+     .program-detail ul li {
+       padding: 10px 14px;
+       font-size: 0.9rem;
+       line-height: 1.5;
+       border-radius: 8px;
+     }
+   }
 </style>
 </body>
 </html>

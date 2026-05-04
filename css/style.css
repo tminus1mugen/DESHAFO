@@ -72,6 +72,18 @@ ul { list-style: none; }
   .container {
     padding: 0 16px;
   }
+
+  /* Mobile programs grid */
+  .programs-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .mission-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 
 /* Prevent overflow from long unbreakable strings */

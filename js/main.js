@@ -134,8 +134,26 @@ function initScrollReveal() {
   const els = document.querySelectorAll('.reveal:not(.visible)');
   if (!els.length) return;
   const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-  }, { threshold: 0.12 });
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, {
+    threshold: 0.05,
+    rootMargin: '0px 0px -50px 0px'
+  });
+  // Trigger immediately for elements already in viewport on load
+  setTimeout(() => {
+    els.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('visible');
+        obs.unobserve(el);
+      }
+    });
+  }, 100);
   els.forEach(el => obs.observe(el));
 }
 
@@ -281,49 +299,49 @@ document.addEventListener('DOMContentLoaded', () => {
    GLOBAL LIGHTBOX FUNCTIONS
    ───────────────────────────────────────────────── */
 const galleryOrder = [
-  { id: 'deshafoteens', src: 'assets/images/deshafoteens.jpeg', title: 'Deshafo Teens and MOSA Youth join forces for a shoreline clean-up at the Lake Victoria Pier in Homabay.' },
-  { id: 'community2', src: 'assets/images/community2.jpeg', title: 'Community women accessing clean, solar-pumped water from the newly drilled borehole at Deshafo Integrated School.' },
-  { id: 'photo2', src: 'assets/images/photo2.jpeg', title: 'Learners practicing proper hand hygiene with running water after their environmental conservation activities.' },
-  { id: 'photo3', src: 'assets/images/photo3.jpeg', title: 'Instilling lifelong health and hygiene practices through post-activity handwashing.' },
-  { id: 'foodsec', src: 'assets/images/foodsec.jpeg', title: 'Food Security in Action: Drilled water enables students to plant and nurture their own crops in the school garden.' },
-  { id: 'foodsec2', src: 'assets/images/foodsec2.jpeg', title: 'Harvest Time: Reaping the benefits of sustainable agriculture and reliable water access at the school.' },
-  { id: 'vid', src: 'assets/images/vid.mp4', title: 'Practical Learning: Students engage in hands-on education about the nutritional value of the foods they cultivate.' },
-  { id: 'wash', src: 'assets/images/wash.jpeg', title: 'Promoting health and hygiene during the DESHAFO Character & Purpose Mentorship Program.' },
-  { id: 'wash2', src: 'assets/images/wash2.jpeg', title: 'Mentorship participants washing hands, reinforcing the importance of sanitation in youth development.' },
-  { id: 'edu1', src: 'assets/images/edu1.jpeg', title: 'Empowering children through CBC curriculum guidance and active learning.' },
-  { id: 'edu2', src: 'assets/images/edu2.jpeg', title: 'Students actively participating in an academic support session.' },
-  { id: 'edu3', src: 'assets/images/edu3.jpeg', title: 'Teacher and student sharing a joyful moment during an education session.' },
-  { id: 'edu4', src: 'assets/images/edu4.jpeg', title: 'Students gathered for an outdoor learning and assembly session.' },
-  { id: 'climm1', src: 'assets/images/climm1.jpeg', title: 'Youth climate ambassadors leading a local tree planting drive.' },
-  { id: 'climm2', src: 'assets/images/climm2.jpeg', title: 'Integrating climate literacy into practical school activities.' },
-  { id: 'climm3', src: 'assets/images/climm3.jpeg', title: 'Community-led climate action protecting local ecosystems.' },
-  { id: 'gretech1', src: 'assets/images/gretech1.jpeg', title: 'Children enthusiastically participating in outdoor games and dancing at the GRETECHI Conference.' },
-  { id: 'gretech2', src: 'assets/images/gretech2.jpeg', title: 'Children attentively listening during an outdoor teaching session under a tent at the GRETECHI Conference.' },
-  { id: 'gretech3', src: 'assets/images/gretech3.jpeg', title: 'Children showcasing their creative crafts and learning new skills with mentors.' },
-  { id: 'gretech4', src: 'assets/images/gretech4.jpeg', title: 'The official poster and invitation for the annual GRETECHI Conference.' },
-  { id: 'teen1', src: 'assets/images/teen1.jpeg', title: 'Empowering teen mothers through psychosocial counselling and peer support.' },
-  { id: 'teen2', src: 'assets/images/teen2.jpeg', title: 'School reintegration advocacy and life skills training for young mothers.' },
-  { id: 'teenvid', src: 'assets/images/teenvid.mp4', title: 'Video: Teen mother reintegration and community sensitization in action.' },
-  { id: 'comm1', src: 'assets/images/comm1.jpeg', title: 'Community outreach program engagement.' },
-  { id: 'comm2', src: 'assets/images/comm2.jpeg', title: 'Local community leadership and development.' },
+  { id: 'deshafoteens', src: 'assets/images/deshafoteens.jpeg', title: 'Lake Victoria Shoreline Clean-up: DESHAFO Teens partner with MOSA Youth to remove plastic waste and restore the ecological health of Lake Victoria, Kenya\'s largest freshwater resource, protecting ecosystems and community livelihoods in Homabay County.' },
+  { id: 'community2', src: 'assets/images/community2.jpeg', title: 'Solar-Powered Water Access: Local women and children celebrate clean water from a solar-powered borehole at DESHAFO Integrated School — a transformation that reduces waterborne disease, saves time, and supports school gardening in Homabay County.' },
+  { id: 'photo2', src: 'assets/images/photo2.jpeg', title: 'Handwashing Heroes: Learners master life‑saving hygiene practices after environmental activities, building habits that reduce disease and keep families thriving in rural Homabay.' },
+  { id: 'photo3', src: 'assets/images/photo3.jpeg', title: 'Lifelong Sanitation: Post‑activity handwashing becomes a ritual of care, instilling hygiene values that last a lifetime in young learners across Homabay County.' },
+  { id: 'foodsec', src: 'assets/images/foodsec.jpeg', title: 'School Gardens for Food Security: With reliable water from the borehole, students plant and nurture nutritious crops, learning agriculture that feeds families and builds resilience against drought in Homabay.' },
+  { id: 'foodsec2', src: 'assets/images/foodsec2.jpeg', title: 'Harvest of Hope: Students reap the rewards of their garden — fresh vegetables that nourish the school community and demonstrate the power of sustainable agriculture at DESHAFO Integrated School.' },
+  { id: 'vid', src: 'assets/images/vid.mp4', title: 'From Soil to Plate: A hands‑on lesson where students discover where food comes from, the nutrients it provides, and the pride of growing their own produce at DESHAFO Integrated School.' },
+  { id: 'wash', src: 'assets/images/wash.jpeg', title: 'Clean Hands, Bright Futures: The DESHAFO Character & Purpose Mentorship Program weaves health messages into sessions that shape responsible, healthy youth across Homabay.' },
+  { id: 'wash2', src: 'assets/images/wash2.jpeg', title: 'Sanitation Champions: Mentorship participants practice proper handwashing — a simple act that prevents diarrheal disease and keeps schools safe in rural communities.' },
+  { id: 'edu1', src: 'assets/images/edu1.jpeg', title: 'CBC in Action: Teachers guide learners through the Competency‑Based Curriculum, fostering critical thinking, creativity, and real‑world skills at DESHAFO Integrated School.' },
+  { id: 'edu2', src: 'assets/images/edu2.jpeg', title: 'Active Learning: Students participate in an academic support session, asking questions and building confidence in core subjects with DESHAFO mentors.' },
+  { id: 'edu3', src: 'assets/images/edu3.jpeg', title: 'Joy in Education: A teacher shares a moment of connection with a student, embodying DESHAFO\'s supportive, child‑centered approach to learning in Homabay County.' },
+  { id: 'edu4', src: 'assets/images/edu4.jpeg', title: 'Outdoor Assembly: Students gather for an open‑air lesson, combining education with fresh air and community spirit at DESHAFO Integrated School.' },
+  { id: 'climm1', src: 'assets/images/climm1.jpeg', title: 'Youth Climate Ambassadors: Young leaders drive a local tree planting drive, combating deforestation and building climate resilience one seedling at a time in Homabay County.' },
+  { id: 'climm2', src: 'assets/images/climm2.jpeg', title: 'Climate Literacy in Practice: Students get their hands dirty planting trees, linking classroom lessons to real environmental stewardship and ecosystem restoration.' },
+  { id: 'climm3', src: 'assets/images/climm3.jpeg', title: 'Community‑Led Climate Action: Residents plant trees to restore watersheds, safeguard biodiversity, and build long‑term climate resilience for future generations.' },
+  { id: 'gretech1', src: 'assets/images/gretech1.jpeg', title: 'Playful Learning at GRETECHI: Children dance, play games, and build teamwork at the annual four‑day GRETECHI Conference — a celebration of youth potential and purpose in Homabay.' },
+  { id: 'gretech2', src: 'assets/images/gretech2.jpeg', title: 'Focused Under the Tent: Children attentively listen during an outdoor teaching session at the GRETECHI Conference — where education meets adventure and mentorship.' },
+  { id: 'gretech3', src: 'assets/images/gretech3.jpeg', title: 'Creative Crafts & Mentorship: Children showcase handmade projects and learn new skills from dedicated mentors during the GRETECHI Conference, sparking imagination and confidence.' },
+  { id: 'gretech4', src: 'assets/images/gretech4.jpeg', title: 'GRETECHI Conference 2025: The official poster and invitation to a transformative four‑day event that empowers children through mentorship, skills training, and purpose‑driven activities in Homabay.' },
+  { id: 'teen1', src: 'assets/images/teen1.jpeg', title: 'Teen Mother Support: Young mothers find psychosocial counselling, peer solidarity, and hope in a safe space that encourages them to dream again at DESHAFO.' },
+  { id: 'teen2', src: 'assets/images/teen2.jpeg', title: 'Back to School Advocacy: Teen mothers receive life‑skills training and community support to return to education, breaking cycles of poverty and early pregnancy in Homabay.' },
+  { id: 'teenvid', src: 'assets/images/teenvid.mp4', title: 'Reintegration in Action: Teen mothers share their stories, participate in community sensitization, and reclaim their education — proving that second chances create lasting change in Homabay.' },
+  { id: 'comm1', src: 'assets/images/comm1.jpeg', title: 'Community Leadership in Action: Local elders and stakeholders gather to discuss sustainable development initiatives for outbram village, fostering grassroots participation in community-driven change.' },
+  { id: 'comm2', src: 'assets/images/comm2.jpeg', title: 'Local Capacity Building: Community members actively participate in a training session focused on environmental conservation, health advocacy, and economic empowerment — key pillars of DESHAFO\'s grassroots approach.' },
   { id: 'comm', src: 'assets/images/comm3.jpeg', title: 'Village Dialogue: A participatory community forum where residents voice their concerns, share success stories, and collaborate on local solutions for education, health, and climate resilience.' },
-  { id: 'community', src: 'assets/images/community.jpg', title: 'Community engagement and outreach.' },
-  { id: 'kidsvid', src: 'assets/images/kids.mp4', title: 'Video: Outdoor games and team-building at the GRETECHI Conference.' },
-  { id: 'gretech5vid', src: 'assets/images/gretech5.mp4', title: 'Video: Boarder registration day 1 at the GRETECHI Conference.' },
-  { id: 'sfpvid', src: 'assets/images/sfp.mp4', title: 'Video: School feeding program providing nutritious meals to students.' },
-  { id: 'tmpvid', src: 'assets/images/tmp.mp4', title: 'Video: Teen membership program orientation and activities.' },
-  { id: 'plvid', src: 'assets/images/pl.mp4', title: 'Video: Students engaged in hands-on practical lessons.' },
-  { id: 'tpvid', src: 'assets/images/tp.mp4', title: 'Video: Tree planting activity as part of our climate action program.' },
-  { id: 'tp2vid', src: 'assets/images/tp2.mp4', title: 'Video: Community-led tree planting in Homabay County.' },
-  { id: 'wash3vid', src: 'assets/images/wash3.mp4', title: 'Video: Pupils washing their hands.' },
-  { id: 'wash4vid', src: 'assets/images/wash4.mp4', title: 'Video: Teens washing their hands.' },
-  { id: 'kmvid', src: 'assets/images/km.mp4', title: 'Video: Kid mentorship program and celebrations.' },
-  { id: 'wsvid', src: 'assets/images/ws.mp4', title: 'Video: Final touches on the water supply project.' },
-  { id: 'ws2vid', src: 'assets/images/ws2.mp4', title: 'Video: Borehole drilling for sustainable water access.' },
-  { id: 'ficvid', src: 'assets/images/fic.mp4', title: 'Video: Pupils first in command.' },
-  { id: 'pwdvid', src: 'assets/images/PWD.mp4', title: 'Video: Teacher representing people with disabilities.' },
-  { id: 'ecdvid', src: 'assets/images/ECD.mp4', title: 'Video: ECD graduation ceremony 2025.' },
-  { id: 'sfvid', src: 'assets/images/sf.mp4', title: 'Video: School farm cultivation and agricultural learning.' }
+  { id: 'community', src: 'assets/images/community.jpg', title: 'Grassroots Mobilization: DESHAFO team members engage directly with community members in Homabay County, building trust, raising awareness, and mobilizing support for youth and women-led programs.' },
+  { id: 'kidsvid', src: 'assets/images/kids.mp4', title: 'GRETECHI Games & Team‑Building: Energetic outdoor activities where children learn cooperation, leadership, and joy through play at the GRETECHI Conference in Homabay.' },
+  { id: 'gretech5vid', src: 'assets/images/gretech5.mp4', title: 'GRETECHI Boarder Registration Day 1: New arrivals check‑in, receive mentorship materials, and begin their transformative journey at the annual GRETECHI Conference.' },
+  { id: 'sfpvid', src: 'assets/images/sfp.mp4', title: 'Nourishing Young Minds: The School Feeding Program serves balanced meals that improve attendance, concentration, and overall health at DESHAFO Integrated School.' },
+  { id: 'tmpvid', src: 'assets/images/tmp.mp4', title: 'Teen Membership Orientation: Adolescents join DESHAFO\'s network, discovering opportunities for leadership, skills training, and peer support in Homabay County.' },
+  { id: 'plvid', src: 'assets/images/pl.mp4', title: 'Practical Learning in Action: Students conduct experiments and apply theory in hands‑on classroom experiences that deepen understanding of key subjects at DESHAFO.' },
+  { id: 'tpvid', src: 'assets/images/tp.mp4', title: 'Tree Planting for Climate Action: Learners plant native trees on school grounds, combating climate change while beautifying their environment and learning environmental stewardship.' },
+  { id: 'tp2vid', src: 'assets/images/tp2.mp4', title: 'Community Tree Planting: Neighbors, youth, and elders unite to plant hundreds of trees across Homabay, restoring watersheds and protecting natural resources for future generations.' },
+  { id: 'wash3vid', src: 'assets/images/wash3.mp4', title: 'Pupil Handwashing Demonstration: Young children correctly wash hands with soap and water, mastering hygiene habits that keep families healthy in rural communities.' },
+  { id: 'wash4vid', src: 'assets/images/wash4.mp4', title: 'Teen Hygiene Leaders: Adolescents model proper handwashing for younger students, becoming peer educators in health and sanitation across Homabay schools.' },
+  { id: 'kmvid', src: 'assets/images/km.mp4', title: 'Kid Mentorship Celebrations: Children are recognized for achievements, their big smiles reflecting the confidence built through DESHAFO\'s mentorship programs.' },
+  { id: 'wsvid', src: 'assets/images/ws.mp4', title: 'Water Project Finishing Touches: Community members add final details to a new water supply system that will provide clean, reliable water for years to come at DESHAFO.' },
+  { id: 'ws2vid', src: 'assets/images/ws2.mp4', title: 'Borehole Drilling in Progress: A drilling rig penetrates dry earth, promising transformative access to groundwater for the school and surrounding villages in Homabay County.' },
+  { id: 'ficvid', src: 'assets/images/fic.mp4', title: 'Pupils First in Command: Students take leadership roles in school activities, building confidence and responsibility through DESHAFO\'s empowerment programs.' },
+  { id: 'pwdvid', src: 'assets/images/PWD.mp4', title: 'Inclusion Matters: A dedicated teacher advocates for learners with disabilities, ensuring accessible education and equal opportunity for every child at DESHAFO.' },
+  { id: 'ecdvid', src: 'assets/images/ECD.mp4', title: 'ECD Graduation Ceremony 2025: Young graduates don caps and gowns, marking a milestone in early childhood education and setting the stage for lifelong learning at DESHAFO.' },
+  { id: 'sfvid', src: 'assets/images/sf.mp4', title: 'School Farm Cultivation: Tending crops and livestock, students learn agricultural science while supplying fresh produce for school meals and community markets at DESHAFO.' }
 ];
 
 let currentLbIndex = 0;
