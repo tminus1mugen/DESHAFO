@@ -39,7 +39,7 @@
   <div class="container">
 
        <!-- 1 Education & Mentorship -->
-       <div class="program-full reveal">
+       <div class="program-full">
          <div class="program-images-grid">
            <div class="program-img-item"><img src="assets/images/edu1.jpeg" alt="Education Mentorship" loading="eager"/></div>
            <div class="program-img-item"><img src="assets/images/edu2.jpeg" alt="Academic Support" loading="eager"/></div>
@@ -60,13 +60,13 @@
        </div>
     </div>
 
-      <!-- 2 Climate Action -->
-      <div class="program-full reveal" id="climate">
-        <div class="program-images-grid">
-          <div class="program-img-item"><img src="assets/images/climm1.jpeg" alt="Tree planting" loading="lazy"/></div>
-          <div class="program-img-item"><img src="assets/images/climm2.jpeg" alt="Climate education" loading="lazy"/></div>
-          <div class="program-img-item span-full"><img src="assets/images/climm3.jpeg" alt="Sustainable agriculture" loading="lazy"/></div>
-        </div>
+       <!-- 2 Climate Action -->
+       <div class="program-full" id="climate">
+         <div class="program-images-grid">
+           <div class="program-img-item"><img src="assets/images/climm1.jpeg" alt="Tree planting" loading="eager"/></div>
+           <div class="program-img-item"><img src="assets/images/climm2.jpeg" alt="Climate education" loading="eager"/></div>
+           <div class="program-img-item span-full"><img src="assets/images/climm3.jpeg" alt="Sustainable agriculture" loading="eager"/></div>
+         </div>
         <div class="program-detail">
          <span class="badge">Program 02</span>
          <h2>Climate Action</h2>
@@ -83,9 +83,9 @@
        </div>
     </div>
 
-      <!-- 3 Teen Mother Support -->
-      <div class="program-full reveal">
-        <div class="program-images-grid">
+       <!-- 3 Teen Mother Support -->
+       <div class="program-full">
+         <div class="program-images-grid">
           <div class="program-img-item"><img src="assets/images/teen1.jpeg" alt="Teen Mother Support" loading="lazy"/></div>
           <div class="program-img-item"><img src="assets/images/teen2.jpeg" alt="Teen Mother Reintegration" loading="lazy"/></div>
           <div class="program-img-item span-full"><video src="assets/images/teenvid.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;"></video></div>
@@ -104,9 +104,9 @@
        </div>
     </div>
 
-      <!-- 4 GRETECHI Conference -->
-      <div class="program-full reveal">
-        <div class="program-images-grid">
+       <!-- 4 GRETECHI Conference -->
+       <div class="program-full">
+         <div class="program-images-grid">
           <div class="program-img-item"><img src="assets/images/gretech1.jpeg" alt="GRETECHI Conference" loading="lazy"/></div>
           <div class="program-img-item"><img src="assets/images/gretech2.jpeg" alt="GRETECHI Activities" loading="lazy"/></div>
           <div class="program-img-item"><img src="assets/images/gretech3.jpeg" alt="GRETECHI Mentorship" loading="lazy"/></div>
@@ -127,9 +127,9 @@
        </div>
     </div>
 
-      <!-- 5 Community Reach & Leadership -->
-      <div class="program-full reveal">
-        <div class="program-images-grid">
+       <!-- 5 Community Reach & Leadership -->
+       <div class="program-full">
+         <div class="program-images-grid">
           <div class="program-img-item"><img src="assets/images/comm1.jpeg" alt="Community Leadership" loading="lazy"/></div>
           <div class="program-img-item"><img src="assets/images/comm2.jpeg" alt="Community Outreach" loading="lazy"/></div>
            <div class="program-img-item"><img src="assets/images/comm3.jpeg" alt="Community Gathering" loading="lazy"/></div>
@@ -156,7 +156,7 @@
 
 <!-- DONATE CTA -->
 <section class="donate-cta section-pad-sm">
-  <div class="container"><div class="donate-cta-inner reveal">
+  <div class="container"><div class="donate-cta-inner">
     <span class="badge" style="background:rgba(217,178,76,0.15);color:var(--gold-light);border-color:rgba(217,178,76,0.35);">Support Our Work</span>
     <h2>Help Fund These Programs</h2>
     <p>Your support directly powers education, mentorship, and hope for children and youth in Homabay.</p>
@@ -191,14 +191,16 @@
 
 <script src="js/main.js"></script>
 <style>
-  .program-full {
-    display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    gap: 80px;
-    align-items: stretch;
-    padding: 100px 0;
-    border-bottom: 1px solid rgba(15,106,60,0.08);
-  }
+   .program-full {
+     display: grid;
+     grid-template-columns: 1fr 1.1fr;
+     gap: 80px;
+     align-items: stretch;
+     padding: 100px 0;
+     border-bottom: 1px solid rgba(15,106,60,0.08);
+     opacity: 1 !important;
+     transform: none !important;
+   }
   .program-full:nth-child(even) .program-icon-block,
   .program-full:nth-child(even) .program-images-grid {
     order: 2;
@@ -324,6 +326,7 @@
        aspect-ratio: 4/3;
        border-radius: 12px;
        overflow: hidden;
+       background: var(--ivory-dark);
      }
      .program-img-item.span-full {
        grid-column: 1 / -1;
@@ -357,6 +360,12 @@
        line-height: 1.5;
        border-radius: 8px;
      }
+   }
+
+   /* Force reveal animation on page load for programs */
+   .program-full.reveal {
+     opacity: 1 !important;
+     transform: none !important;
    }
 </style>
 </body>
