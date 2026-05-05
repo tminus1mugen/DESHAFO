@@ -39,6 +39,19 @@
         grid-template-columns: 1fr !important;
         gap: 20px !important;
       }
+      .tumaini-timeline {
+        flex-direction: column !important;
+      }
+      .tumaini-timeline > div:first-child {
+        border-radius: var(--radius-md) var(--radius-md) 0 0 !important;
+        border-right: 1.5px solid rgba(217,178,76,0.3) !important;
+        border-bottom: none !important;
+      }
+      .tumaini-timeline > div:last-child {
+        border-radius: 0 0 var(--radius-md) var(--radius-md) !important;
+        border-left: 1.5px solid rgba(217,178,76,0.3) !important;
+        border-top: none !important;
+      }
       .mission-card {
         padding: 24px 20px;
       }
@@ -237,6 +250,85 @@
       <p style="max-width:560px;margin:16px auto 32px;">Beyond programs, DESHAFO has built a school — ensuring that access to quality education is a reality, not just a goal, for children in our community.</p>
       <a href="donations.html" class="btn btn-primary">Support the School</a>
     </div>
+  </div>
+</section>
+
+
+<!-- PROJECT TUMAINI 2030 -->
+<section class="section-pad" style="background:linear-gradient(180deg,var(--green-deep) 0%,#0d4d2a 100%);position:relative;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0.05;background:url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');pointer-events:none;"></div>
+
+  <div class="container" style="position:relative;z-index:1;">
+
+    <!-- Section Header -->
+    <div class="section-header reveal" style="text-align:center;max-width:720px;margin:0 auto 56px;">
+      <span class="badge" style="background:rgba(217,178,76,0.15);color:var(--gold-light);border-color:rgba(217,178,76,0.35);">Vision 2027–2030</span>
+      <h2 style="color:var(--white);">Project Tumaini</h2>
+      <p style="color:rgba(255,255,255,0.7);font-size:1.05rem;line-height:1.75;"><em style="color:var(--gold-light);">Tumaini</em> — Swahili for <em style="color:var(--gold-light);">"Hope."</em> Our boldest step yet: two landmark buildings that will shelter the vulnerable, educate the underserved, and carry DESHAFO's mission further than ever before.</p>
+    </div>
+
+    <!-- Project Image -->
+    <div class="reveal" style="border-radius:var(--radius-lg);overflow:hidden;border:2px solid rgba(217,178,76,0.35);margin-bottom:52px;box-shadow:0 28px 72px rgba(0,0,0,0.45);">
+      <img src="assets/images/project.png" alt="Project Tumaini — Planned campus expansion for DESHAFO Integrated School, Homabay" style="width:100%;display:block;max-height:540px;object-fit:cover;" loading="lazy" />
+      <div style="background:rgba(10,78,45,0.95);padding:14px 24px;display:flex;align-items:center;gap:12px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold-light)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><path d="M12 2v3"/></svg>
+        <span style="color:rgba(255,255,255,0.75);font-size:0.88rem;">Planned campus expansion · DESHAFO Integrated School · Outbram Village, Homabay County, Kenya</span>
+      </div>
+    </div>
+
+    <!-- Two Building Cards -->
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-bottom:52px;">
+
+      <!-- Card 1: Orphanage & SGBV Rescue Centre -->
+      <div class="reveal reveal-delay-1" style="background:rgba(255,255,255,0.06);border:1.5px solid rgba(233,30,99,0.3);border-radius:var(--radius-md);padding:36px;">
+        <div style="width:54px;height:54px;background:rgba(233,30,99,0.12);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f48fb1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3 style="color:var(--gold-light);font-size:1.2rem;margin-bottom:14px;">Orphanage &amp; SGBV Rescue Centre</h3>
+        <p style="color:rgba(255,255,255,0.72);line-height:1.75;margin-bottom:20px;">A safe, dignified residence for orphaned children and survivors of sexual and gender-based violence — providing shelter, trauma-informed counselling, and a clear pathway to healing and a stable future.</p>
+        <div style="padding:12px 16px;background:rgba(233,30,99,0.1);border-radius:var(--radius-sm);border-left:3px solid #e91e63;">
+          <span style="font-size:0.8rem;color:#f48fb1;font-weight:600;text-transform:uppercase;letter-spacing:0.6px;">Located at the rear of the campus</span>
+        </div>
+      </div>
+
+      <!-- Card 2: 3-Storey Tuition Block & Autism Wing -->
+      <div class="reveal reveal-delay-2" style="background:rgba(255,255,255,0.06);border:1.5px solid rgba(44,143,214,0.3);border-radius:var(--radius-md);padding:36px;">
+        <div style="width:54px;height:54px;background:rgba(44,143,214,0.12);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7ecfff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3 style="color:var(--gold-light);font-size:1.2rem;margin-bottom:14px;">3-Storey Tuition Block &amp; Autism Wing</h3>
+        <p style="color:rgba(255,255,255,0.72);line-height:1.75;margin-bottom:20px;">A modern three-floor teaching block that will dramatically expand our learning capacity — with a dedicated wing specially designed for children living with autism, ensuring inclusive, specialized education for every learner.</p>
+        <div style="padding:12px 16px;background:rgba(44,143,214,0.1);border-radius:var(--radius-sm);border-left:3px solid var(--blue);">
+          <span style="font-size:0.8rem;color:#7ecfff;font-weight:600;text-transform:uppercase;letter-spacing:0.6px;">Fully inclusive · Specialized autism support</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline bar -->
+    <div class="reveal" style="display:flex;justify-content:center;align-items:stretch;margin-bottom:52px;max-width:520px;margin-left:auto;margin-right:auto;">
+      <div style="flex:1;text-align:center;padding:22px 28px;background:rgba(255,255,255,0.07);border:1.5px solid rgba(217,178,76,0.3);border-right:none;border-radius:var(--radius-md) 0 0 var(--radius-md);">
+        <div style="font-size:2rem;font-weight:800;color:var(--gold-light);line-height:1;">2027</div>
+        <div style="font-size:0.78rem;color:rgba(255,255,255,0.55);margin-top:6px;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;">Construction Begins</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:22px 20px;background:rgba(217,178,76,0.07);border-top:1.5px solid rgba(217,178,76,0.3);border-bottom:1.5px solid rgba(217,178,76,0.3);">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        <div style="font-size:0.72rem;color:rgba(255,255,255,0.4);margin-top:4px;">3 yrs</div>
+      </div>
+      <div style="flex:1;text-align:center;padding:22px 28px;background:rgba(255,255,255,0.07);border:1.5px solid rgba(217,178,76,0.3);border-left:none;border-radius:0 var(--radius-md) var(--radius-md) 0;">
+        <div style="font-size:2rem;font-weight:800;color:var(--gold-light);line-height:1;">2030</div>
+        <div style="font-size:0.78rem;color:rgba(255,255,255,0.55);margin-top:6px;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;">Target Completion</div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="reveal" style="text-align:center;">
+      <p style="color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto 28px;line-height:1.75;">Project Tumaini is a community endeavor. Every contribution today helps lay the foundation for tomorrow's safe haven and classroom.</p>
+      <a href="donations.html" class="btn btn-gold" style="font-size:1.05rem;padding:16px 40px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="flex-shrink:0;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Help Build Project Tumaini →
+      </a>
+    </div>
+
   </div>
 </section>
 
