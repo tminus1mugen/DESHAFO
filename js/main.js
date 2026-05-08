@@ -61,7 +61,8 @@
     if (!main) return;
     main.style.opacity = '0';
     try {
-      const html = await (await fetch(href)).text();
+      const [pagePath, hash] = href.split('#');
+      const html = await (await fetch(pagePath)).text();
       const { title, frag, styles } = parseDoc(html);
       // Swap page-specific styles
       document.querySelectorAll('style[data-spa]').forEach(s => s.remove());
@@ -82,7 +83,16 @@
       document.title = title;
       if (push) history.pushState({ href }, title, href);
       setActive(href);
-      window.scrollTo({ top: 0 });
+      if (hash) {
+        const target = document.getElementById(hash);
+        if (target) {
+          setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+        } else {
+          window.scrollTo({ top: 0 });
+        }
+      } else {
+        window.scrollTo({ top: 0 });
+      }
       main.style.opacity = '1';
       initPageFeatures();
     } catch(err) {
