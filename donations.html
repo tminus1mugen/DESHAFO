@@ -89,70 +89,30 @@
   <link rel="stylesheet" href="css/loader.css"/>
 </head>
 <body>
-<!-- ═══════════════ TREE LOADER ═══════════════ -->
+<!-- ═══════════════ LOGO LOADER ═══════════════ -->
 <div id="page-loader" aria-label="Loading" role="status">
-  <div class="loader-particles">
-    <span style="left:42%;top:35%;--dur:3.8s;--delay:0s"></span>
-    <span style="left:55%;top:40%;--dur:4.5s;--delay:0.8s"></span>
-    <span style="left:38%;top:50%;--dur:3.2s;--delay:1.4s"></span>
-    <span style="left:62%;top:45%;--dur:5s;--delay:0.3s"></span>
-    <span style="left:48%;top:38%;--dur:4.1s;--delay:2s"></span>
-    <span style="left:35%;top:42%;--dur:3.6s;--delay:1s"></span>
-    <span style="left:65%;top:52%;--dur:4.8s;--delay:0.5s"></span>
+  <div class="ldr-orb ldr-orb--a"></div>
+  <div class="ldr-orb ldr-orb--b"></div>
+  <div class="ldr-orb ldr-orb--c"></div>
+  <div class="ldr-stage">
+    <div class="ldr-ripple ldr-ripple--1"></div>
+    <div class="ldr-ripple ldr-ripple--2"></div>
+    <div class="ldr-ripple ldr-ripple--3"></div>
+    <div class="ldr-outer-ring"></div>
+    <svg class="ldr-orbital" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="90" class="ldr-track"/>
+      <circle cx="100" cy="100" r="90" class="ldr-comet--glow"/>
+      <circle cx="100" cy="100" r="90" class="ldr-comet--arc"/>
+      <circle cx="100" cy="100" r="90" class="ldr-comet--tip"/>
+    </svg>
+    <div class="ldr-logo-wrap">
+      <img src="assets/images/logo.png" class="ldr-logo" alt="DESHAFO"/>
+      <div class="ldr-logo-halo"></div>
+      <div class="ldr-logo-shine"></div>
+    </div>
   </div>
-  <svg class="loader-tree" viewBox="0 0 200 290" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="shimmer-grad" x1="-200" y1="0" x2="0" y2="0" gradientUnits="userSpaceOnUse">
-        <stop offset="0%"   stop-color="#4A2C0A"/>
-        <stop offset="35%"  stop-color="#7A4B1F"/>
-        <stop offset="50%"  stop-color="#F0D57A"/>
-        <stop offset="65%"  stop-color="#7A4B1F"/>
-        <stop offset="100%" stop-color="#4A2C0A"/>
-        <animate attributeName="x1" values="-200;200" dur="2.4s" repeatCount="indefinite"/>
-        <animate attributeName="x2" values="0;400"   dur="2.4s" repeatCount="indefinite"/>
-      </linearGradient>
-      <filter id="branch-glow">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
-        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-      </filter>
-    </defs>
-    <g stroke="url(#shimmer-grad)" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#branch-glow)">
-      <line x1="100" y1="285" x2="100" y2="188" stroke-width="10"/>
-      <line x1="100" y1="210" x2="52"  y2="155" stroke-width="7"/>
-      <line x1="100" y1="210" x2="148" y2="155" stroke-width="7"/>
-      <line x1="100" y1="232" x2="35"  y2="195" stroke-width="6"/>
-      <line x1="100" y1="232" x2="165" y2="195" stroke-width="6"/>
-      <line x1="100" y1="188" x2="86"  y2="150" stroke-width="5"/>
-      <line x1="100" y1="188" x2="114" y2="150" stroke-width="5"/>
-      <line x1="52"  y1="155" x2="28"  y2="120" stroke-width="4.5"/>
-      <line x1="52"  y1="155" x2="68"  y2="112" stroke-width="4"/>
-      <line x1="148" y1="155" x2="172" y2="120" stroke-width="4.5"/>
-      <line x1="148" y1="155" x2="132" y2="112" stroke-width="4"/>
-      <line x1="35"  y1="195" x2="14"  y2="170" stroke-width="3.5"/>
-      <line x1="35"  y1="195" x2="44"  y2="166" stroke-width="3"/>
-      <line x1="165" y1="195" x2="186" y2="170" stroke-width="3.5"/>
-      <line x1="165" y1="195" x2="156" y2="166" stroke-width="3"/>
-      <line x1="86"  y1="150" x2="74"  y2="124" stroke-width="3.5"/>
-      <line x1="86"  y1="150" x2="92"  y2="118" stroke-width="3"/>
-      <line x1="114" y1="150" x2="126" y2="124" stroke-width="3.5"/>
-      <line x1="114" y1="150" x2="108" y2="118" stroke-width="3"/>
-      <line x1="28"  y1="120" x2="17"  y2="102" stroke-width="2.5"/>
-      <line x1="28"  y1="120" x2="36"  y2="98"  stroke-width="2"/>
-      <line x1="68"  y1="112" x2="60"  y2="94"  stroke-width="2.5"/>
-      <line x1="68"  y1="112" x2="76"  y2="90"  stroke-width="2"/>
-      <line x1="172" y1="120" x2="183" y2="102" stroke-width="2.5"/>
-      <line x1="172" y1="120" x2="164" y2="98"  stroke-width="2"/>
-      <line x1="132" y1="112" x2="140" y2="94"  stroke-width="2.5"/>
-      <line x1="132" y1="112" x2="124" y2="90"  stroke-width="2"/>
-      <line x1="74"  y1="124" x2="66"  y2="106" stroke-width="2"/>
-      <line x1="92"  y1="118" x2="88"  y2="100" stroke-width="2"/>
-      <line x1="92"  y1="118" x2="97"  y2="96"  stroke-width="1.5"/>
-      <line x1="126" y1="124" x2="134" y2="106" stroke-width="2"/>
-      <line x1="108" y1="118" x2="112" y2="100" stroke-width="2"/>
-      <line x1="108" y1="118" x2="103" y2="96"  stroke-width="1.5"/>
-    </g>
-  </svg>
-  <p class="loader-tagline">DESHAFO</p>
+  <p class="ldr-tagline"><em>Shaping Destiny.</em>&nbsp; Restoring Hope.</p>
+  <div class="ldr-dots"><span></span><span></span><span></span><span></span><span></span></div>
 </div>
 <!-- ══════════════ END LOADER ══════════════ -->
 
@@ -334,7 +294,8 @@
   }
 </script>
 <script>
-  (function(){var l=document.getElementById('page-loader');if(!l)return;window.addEventListener('load',function(){setTimeout(function(){l.classList.add('loader-hidden');},350);});})();
+  (function(){var l=document.getElementById('page-loader');if(!l)return;window.addEventListener('load',function(){setTimeout(function(){l.classList.add('loader-hidden');},420);});})();
 </script></body>
 </html>
+
 
