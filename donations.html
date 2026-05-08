@@ -294,8 +294,37 @@
   }
 </script>
 <script>
-  (function(){var l=document.getElementById('page-loader');if(!l)return;window.addEventListener('load',function(){setTimeout(function(){l.classList.add('loader-hidden');},420);});})();
+  (function(){
+    var l=document.getElementById('page-loader');
+    if(!l)return;
+
+    /* ── Minimum time loader stays visible (ms) ── */
+    var MIN_MS=750;
+    var t0=window.performance&&performance.timing?performance.timing.navigationStart:Date.now();
+
+    /* ── Hide after page loads, respecting minimum display time ── */
+    window.addEventListener('load',function(){
+      var elapsed=Date.now()-t0;
+      var wait=Math.max(280,MIN_MS-elapsed);
+      setTimeout(function(){l.classList.add('loader-hidden');},wait);
+    });
+
+    /* ── Show loader when navigating AWAY (outgoing transition) ── */
+    document.addEventListener('click',function(e){
+      var a=e.target.closest('a[href]');
+      if(!a)return;
+      var h=a.getAttribute('href')||'';
+      if(!h||h.charAt(0)==='#'||/^(mailto|tel|http|https):/.test(h)||a.target==='_blank')return;
+      l.classList.remove('loader-hidden');
+    });
+
+    /* ── Handle bfcache page restore (browser back/forward) ── */
+    window.addEventListener('pageshow',function(e){
+      if(e.persisted)l.classList.add('loader-hidden');
+    });
+  })();
 </script></body>
 </html>
+
 
 
