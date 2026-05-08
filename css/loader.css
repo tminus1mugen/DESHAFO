@@ -1,0 +1,113 @@
+/* ═══════════════════════════════════════════════
+   DESHAFO — Bare Tree Page Loader
+   ═══════════════════════════════════════════════ */
+
+#page-loader {
+  position: fixed;
+  inset: 0;
+  background: #050E07;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+#page-loader.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ── Tree SVG ── */
+.loader-tree {
+  width: 170px;
+  height: auto;
+  transform-origin: 50% 100%;
+  animation:
+    tree-reverb 2.4s ease-in-out infinite,
+    tree-glow   2.4s ease-in-out infinite;
+}
+
+/* Reverberation — subtle living-tree oscillation */
+@keyframes tree-reverb {
+  0%   { transform: scale(1)     rotate(0deg)    translateY(0px); }
+  7%   { transform: scale(1.009) rotate(0.5deg)  translateY(-2px); }
+  14%  { transform: scale(0.993) rotate(-0.35deg) translateY(1px); }
+  21%  { transform: scale(1.007) rotate(0.28deg) translateY(-1.2px); }
+  28%  { transform: scale(0.996) rotate(-0.18deg) translateY(0.6px); }
+  35%  { transform: scale(1.005) rotate(0.22deg) translateY(-0.9px); }
+  42%  { transform: scale(0.998) rotate(-0.13deg) translateY(0.4px); }
+  50%  { transform: scale(1.004) rotate(0.17deg) translateY(-0.7px); }
+  58%  { transform: scale(0.999) rotate(-0.09deg) translateY(0.2px); }
+  66%  { transform: scale(1.003) rotate(0.11deg) translateY(-0.4px); }
+  75%  { transform: scale(1.001) rotate(-0.05deg) translateY(-0.1px); }
+  84%  { transform: scale(1.002) rotate(0.06deg) translateY(-0.2px); }
+  92%  { transform: scale(1.0005) rotate(-0.03deg) translateY(0px); }
+  100% { transform: scale(1)     rotate(0deg)    translateY(0px); }
+}
+
+/* Shimmer glow pulse synced with gradient sweep */
+@keyframes tree-glow {
+  0%, 100% {
+    filter:
+      drop-shadow(0 0 2px rgba(217, 178, 76, 0.15))
+      drop-shadow(0 2px 8px rgba(15, 106, 60, 0.5));
+  }
+  50% {
+    filter:
+      drop-shadow(0 0 10px rgba(217, 178, 76, 0.65))
+      drop-shadow(0 0 22px rgba(217, 178, 76, 0.25))
+      drop-shadow(0 2px 12px rgba(15, 106, 60, 0.6));
+  }
+}
+
+/* ── Ground line ── */
+.loader-ground {
+  stroke: #1a4d28;
+  stroke-width: 2;
+  opacity: 0.5;
+}
+
+/* ── Tagline ── */
+.loader-tagline {
+  color: rgba(217, 178, 76, 0.65);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  margin: 0;
+  animation: tagline-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes tagline-pulse {
+  0%, 100% { opacity: 0.4; letter-spacing: 0.5em; }
+  50%       { opacity: 1;   letter-spacing: 0.6em; }
+}
+
+/* ── Particle dots scattered around tree ── */
+.loader-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.loader-particles span {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: rgba(217, 178, 76, 0.5);
+  animation: particle-drift var(--dur, 4s) ease-in-out infinite var(--delay, 0s);
+}
+
+@keyframes particle-drift {
+  0%   { transform: translateY(0) scale(0);   opacity: 0; }
+  20%  { opacity: 1; transform: translateY(-12px) scale(1); }
+  80%  { opacity: 0.6; }
+  100% { transform: translateY(-40px) scale(0.3); opacity: 0; }
+}
