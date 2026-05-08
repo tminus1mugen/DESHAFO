@@ -140,33 +140,31 @@
     var l=document.getElementById('page-loader');
     if(!l)return;
 
-    /* ── Minimum time loader stays visible (ms) ── */
-    var MIN_MS=750;
+    var FAST_MS=280;   /* pages loading faster than this skip the loader entirely */
+    var MIN_MS =700;   /* minimum time loader is shown on slow pages              */
     var t0=window.performance&&performance.timing?performance.timing.navigationStart:Date.now();
 
-    /* ── Hide after page loads, respecting minimum display time ── */
     window.addEventListener('load',function(){
       var elapsed=Date.now()-t0;
-      var wait=Math.max(280,MIN_MS-elapsed);
-      setTimeout(function(){l.classList.add('loader-hidden');},wait);
+      if(elapsed<FAST_MS){
+        /* Fast load — kill loader with no visible flash */
+        l.style.transition='none';
+        l.style.display='none';
+      } else {
+        /* Slow load — keep visible for minimum time, then fade */
+        var wait=Math.max(0,MIN_MS-elapsed);
+        setTimeout(function(){ l.classList.add('loader-hidden'); },wait);
+      }
     });
 
-    /* ── Show loader when navigating AWAY (outgoing transition) ── */
-    document.addEventListener('click',function(e){
-      var a=e.target.closest('a[href]');
-      if(!a)return;
-      var h=a.getAttribute('href')||'';
-      if(!h||h.charAt(0)==='#'||/^(mailto|tel|http|https):/.test(h)||a.target==='_blank')return;
-      l.classList.remove('loader-hidden');
-    });
-
-    /* ── Handle bfcache page restore (browser back/forward) ── */
+    /* Browser back/forward (bfcache restore) — page is already ready */
     window.addEventListener('pageshow',function(e){
-      if(e.persisted)l.classList.add('loader-hidden');
+      if(e.persisted){ l.style.transition='none'; l.style.display='none'; }
     });
   })();
 </script></body>
 </html>
+
 
 
 
