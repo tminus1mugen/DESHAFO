@@ -270,6 +270,10 @@
     var l=document.getElementById('page-loader');
     if(!l)return;
 
+    /* Skip loader on all visits after the first in this session */
+    if(sessionStorage.getItem('visited')){l.style.transition='none';l.style.display='none';return;}
+    sessionStorage.setItem('visited','1');
+
     var FAST_MS=280;   /* pages loading faster than this skip the loader entirely */
     var MIN_MS =700;   /* minimum time loader is shown on slow pages              */
     var t0=window.performance&&performance.timing?performance.timing.navigationStart:Date.now();

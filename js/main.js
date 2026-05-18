@@ -3,6 +3,61 @@
    =================================================== */
 
 /* ─────────────────────────────────────────────────
+   TOP PROGRESS BAR — works on all protocols
+   ───────────────────────────────────────────────── */
+const Progress = (function() {
+  let el, styleAdded = false, t1, t2;
+  function bar() {
+    if (!el) {
+      if (!styleAdded) {
+        const s = document.createElement('style');
+        s.textContent = '#nav-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#D9B24C,#F0D57A);z-index:99999;opacity:0;pointer-events:none;border-radius:0 2px 2px 0;box-shadow:0 0 10px rgba(217,178,76,0.5);}';
+        document.head.appendChild(s);
+        styleAdded = true;
+      }
+      el = document.createElement('div');
+      el.id = 'nav-progress';
+      document.body.appendChild(el);
+    }
+    return el;
+  }
+  function start() {
+    clearTimeout(t1); clearTimeout(t2);
+    const b = bar();
+    b.style.transition = 'none';
+    b.style.width = '0'; b.style.opacity = '1';
+    void b.offsetHeight;
+    b.style.transition = 'width 0.35s cubic-bezier(0.4,0,0.2,1)';
+    b.style.width = '25%';
+    t1 = setTimeout(() => { b.style.transition = 'width 1.2s cubic-bezier(0.4,0,0.2,1)'; b.style.width = '75%'; }, 350);
+  }
+  function done() {
+    clearTimeout(t1); clearTimeout(t2);
+    const b = bar();
+    b.style.transition = 'width 0.2s ease, opacity 0.35s ease 0.15s';
+    b.style.width = '100%';
+    t2 = setTimeout(() => { b.style.opacity = '0'; }, 150);
+    t2 = setTimeout(() => { b.style.transition = 'none'; b.style.width = '0'; }, 550);
+  }
+  return { start, done };
+})();
+
+/* On file:// protocol, show the bar on link click (page will reload naturally) */
+(function() {
+  const SKIP_EXTS = /\.(pdf|jpg|jpeg|png|gif|webp|svg|zip|mp4|mp3)$/i;
+  if (location.protocol !== 'file:') return;
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href]');
+    if (!a) return;
+    const href = a.getAttribute('href');
+    if (!href || href.startsWith('http') || href.startsWith('//') ||
+        href.startsWith('mailto:') || href.startsWith('tel:') ||
+        href.startsWith('javascript:') || href.startsWith('#') || SKIP_EXTS.test(href)) return;
+    Progress.start();
+  });
+})();
+
+/* ─────────────────────────────────────────────────
    SPA ROUTER — smooth page transitions without reload
    Only activates when served over http/https.
    On file:// protocol, links work normally (no fetch).
@@ -23,7 +78,7 @@
     if (!mobileNav || !footer) return null;
     const wrap = document.createElement('div');
     wrap.id = MAIN_ID;
-    wrap.style.cssText = 'opacity:1;transition:opacity 0.2s ease;';
+    wrap.style.cssText = 'opacity:1;transform:translateY(0);transition:opacity 0.25s cubic-bezier(0.4,0,0.2,1),transform 0.25s cubic-bezier(0.4,0,0.2,1);';
     const nodes = [];
     let cur = mobileNav.nextSibling;
     while (cur && cur !== footer) { nodes.push(cur); cur = cur.nextSibling; }
@@ -59,44 +114,62 @@
   async function navigate(href, push) {
     const main = document.getElementById(MAIN_ID);
     if (!main) return;
+
+    Progress.start();
+
+    // Fade out + slide down slightly
+    main.style.transition = 'opacity 0.22s cubic-bezier(0.4,0,0.2,1),transform 0.22s cubic-bezier(0.4,0,0.2,1)';
     main.style.opacity = '0';
+    main.style.transform = 'translateY(12px)';
+
+    // Wait for fade-out to finish before swapping content
+    await new Promise(r => setTimeout(r, 230));
+
     try {
       const [pagePath, hash] = href.split('#');
       const html = await (await fetch(pagePath)).text();
       const { title, frag, styles } = parseDoc(html);
+
       // Swap page-specific styles
       document.querySelectorAll('style[data-spa]').forEach(s => s.remove());
       if (styles) {
-        // Parse the styles HTML string and create proper style elements
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = styles;
-        const styleElements = tempDiv.querySelectorAll('style');
-        styleElements.forEach(origStyle => {
+        tempDiv.querySelectorAll('style').forEach(origStyle => {
           const newStyle = document.createElement('style');
           newStyle.setAttribute('data-spa', '');
           newStyle.textContent = origStyle.textContent;
           document.head.appendChild(newStyle);
         });
       }
+
       main.innerHTML = '';
       if (frag) main.appendChild(frag);
       document.title = title;
       if (push) history.pushState({ href }, title, href);
       setActive(href);
+
       if (hash) {
         const target = document.getElementById(hash);
-        if (target) {
-          setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
-        } else {
-          window.scrollTo({ top: 0 });
-        }
+        if (target) setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+        else window.scrollTo({ top: 0 });
       } else {
         window.scrollTo({ top: 0 });
       }
+
+      // Position above, no transition, then animate in
+      main.style.transition = 'none';
+      main.style.transform = 'translateY(-10px)';
+      void main.offsetHeight; // force reflow
+
+      main.style.transition = 'opacity 0.35s cubic-bezier(0.4,0,0.2,1),transform 0.35s cubic-bezier(0.4,0,0.2,1)';
       main.style.opacity = '1';
+      main.style.transform = 'translateY(0)';
+
+      Progress.done();
       initPageFeatures();
     } catch(err) {
-      // Fallback: normal navigation
+      Progress.done();
       location.href = href;
     }
   }

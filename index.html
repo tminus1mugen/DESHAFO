@@ -331,7 +331,7 @@
     <div class="section-header reveal">
       <span class="badge">What We Do</span>
       <h2>Our Core Areas of Impact</h2>
-      <p>DESHAFO integrates several community-driven activities under one mission — transforming lives from the roots up.</p>
+      <p>DESHAFO integrates community-driven initiatives that combine <strong>Education, Mentorship, and Climate-Smart Environmental Activities and Enterprises to transform lives from the roots up</strong>. We empower children, youth, and women not only through learning and guidance, but also through sustainable livelihood opportunities such as ISSB production — creating jobs, enabling affordable housing, and promoting environmental conservation.</p>
     </div>
     <div class="mission-grid">
       <div class="mission-card reveal reveal-delay-1">
@@ -342,7 +342,7 @@
          <div class="mission-card reveal reveal-delay-2">
          <div class="card-icon" style="background:rgba(44,143,214,0.1);"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 6 16 4 21l2-1c2-5 4-9 10-11v6zM17 8l-3 3 3 3V8zM9 3l3 3-3 3V3z"/></svg></div>
          <h3>Climate Action</h3>
-         <p>Combating climate change through tree planting, environmental education, and sustainable farming — empowering Kenyan youth as environmental stewards in Homabay and beyond.</p>
+         <p>We address climate change through integrated solutions including <strong>tree planting, environmental education, sustainable farming, and ISSB-based eco-construction</strong>. This reduces reliance on fired bricks, lowers environmental impact, and creates green livelihood opportunities for youth and women while advancing sustainable community development.</p>
        </div>
       <div class="mission-card reveal reveal-delay-3">
         <div class="card-icon" style="background:rgba(244,166,58,0.12);"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
@@ -367,7 +367,7 @@
     <div class="section-header reveal" style="position:relative;z-index:1;text-align:center;max-width:700px;margin:0 auto 56px;">
       <span class="badge" style="background:rgba(44,143,214,0.15);color:#7ecfff;border-color:rgba(44,143,214,0.4);">Climate Impact</span>
       <h2 style="color:var(--white);">Protecting Homabay's Environment</h2>
-      <p style="color:rgba(255,255,255,0.7);">Climate change threatens the Lake Victoria basin. We're equipping the next generation to lead the response.</p>
+      <p style="color:rgba(255,255,255,0.7);">Climate change threatens the future of the Lake Victoria basin, but solutions must be local, practical, and sustainable. <strong style="color:#fff;">DESHAFO</strong> is empowering communities through integrated climate action — from tree planting and environmental education to ISSB production for eco-friendly construction. Through our affiliated groups — <strong style="color:#fff;">Kolamo</strong> Self Help Group, <strong style="color:#fff;">Central Ladies</strong> Self Help Group, and the <strong style="color:#fff;">Rodi-Homabay Bodaboda Group</strong> — we have trained community members in ISSB technology, enabling them to construct affordable, sustainable homes for their own members. This model reduces deforestation, lowers carbon emissions, and creates green economic opportunities, equipping youth and women to lead environmental restoration while building resilient, self-sustaining communities across the Central Ward.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px;position:relative;z-index:1;">
        <div class="climate-stat-card reveal reveal-delay-1" style="text-align:center;padding:32px 20px;background:rgba(255,255,255,0.06);border-radius:var(--radius-md);border:1.5px solid rgba(44,143,214,0.25);transition:var(--transition);">
@@ -415,9 +415,11 @@
           </div>
          <div class="about-text reveal reveal-delay-1">
         <span class="badge">About DESHAFO</span>
-        <h2>DEstiny SHApers FOundation</h2>
-        <p>Founded in 2019 by Rolex Ong'ute, DESHAFO Integrated CBO is a registered community-based organization in Outbram Village, Central Ward, Homabay Town Sub-county.</p>
-        <p>Our mission is to create opportunities for underprivileged children, youth, and women through education, mentorship, and climate action. We also operate <strong>DESHAFO Integrated School</strong> — a testament to our commitment to accessible education.</p>
+        <h2>DEstiny SHApers FOundation (DESHAFO)</h2>
+        <p>Founded in 2019 by Rolex Ong'ute, DESHAFO Integrated CBO is a registered community-based organization based in Outbram Village, Central Ward, Homabay Town Sub-county.</p>
+        <p>Our mission is to create opportunities for underprivileged children, youth, and women through education, mentorship, and climate-smart livelihood solutions.</p>
+        <p>Through initiatives such as our Interlocking Stabilized Soil Blocks (ISSB) enterprise — implemented alongside community groups including Kolamo Self Help Group, Central Ladies Self Help Group, and the Rodi-Homabay Bodaboda Group — we are creating green jobs, promoting sustainable construction, and improving living conditions.</p>
+        <p>We also operate <strong>DESHAFO Integrated School</strong> — a testament to our commitment to accessible, inclusive, and community-driven education.</p>
         <div class="about-values">
           <div class="about-value-item">
             <div class="v-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
@@ -718,6 +720,10 @@
   (function(){
     var l=document.getElementById('page-loader');
     if(!l)return;
+
+    /* Skip loader on all visits after the first in this session */
+    if(sessionStorage.getItem('visited')){l.style.transition='none';l.style.display='none';return;}
+    sessionStorage.setItem('visited','1');
 
     var FAST_MS=280;   /* pages loading faster than this skip the loader entirely */
     var MIN_MS =700;   /* minimum time loader is shown on slow pages              */
