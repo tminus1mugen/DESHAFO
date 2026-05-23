@@ -454,7 +454,8 @@ window.openLightbox = function(id, title) {
     vid.src = src;
     vid.controls = true;
     vid.autoplay = true;
-    vid.className = 'lightbox-img';
+    vid.playsInline = true;
+    vid.className = 'lightbox-video';
     inner.appendChild(vid);
   } else {
     const img = document.createElement('img');

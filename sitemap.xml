@@ -1,45 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://deshafo.org/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://deshafo.org/assets/images/deshafoteens.jpeg</image:loc>
+      <image:title>DESHAFO Integrated CBO teens and youth in Homa Bay</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://deshafo.org/about.html</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://deshafo.org/assets/images/community2.jpeg</image:loc>
+      <image:title>DESHAFO community work in Homa Bay County</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://deshafo.org/programs.html</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://deshafo.org/assets/images/climm1.jpeg</image:loc>
+      <image:title>DESHAFO climate action and youth programs</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://deshafo.org/gallery.html</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://deshafo.org/assets/images/deshafoteens.jpeg</image:loc>
+      <image:title>DESHAFO community impact gallery</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://deshafo.org/founder.html</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://deshafo.org/assets/images/Rolex.jpeg</image:loc>
+      <image:title>Rolex Ong'ute, founder of DESHAFO Integrated CBO</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://deshafo.org/contact.html</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://deshafo.org/donations.html</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://deshafo.org/assets/images/community2.jpeg</image:loc>
+      <image:title>Donate to support DESHAFO programs in Homa Bay</image:title>
+    </image:image>
   </url>
 </urlset>

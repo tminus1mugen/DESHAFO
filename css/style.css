@@ -1767,12 +1767,13 @@ footer::before {
 .lightbox-next { right: max(24px, env(safe-area-inset-right, 24px)); }
 
 .lightbox-inner {
-  max-width: 90vw;
+  width: min(90vw, 1200px);
   max-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: auto;
 }
 
 .lightbox-img {
@@ -1781,6 +1782,19 @@ footer::before {
   object-fit: contain;
   border-radius: var(--radius-sm);
   box-shadow: 0 32px 80px rgba(0,0,0,0.5);
+}
+
+.lightbox-video {
+  display: block;
+  width: 100%;
+  max-width: min(90vw, 1200px);
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  background: #000;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 32px 80px rgba(0,0,0,0.5);
+  margin: 0 auto;
 }
 
 .lightbox-caption {
@@ -1820,8 +1834,9 @@ footer::before {
   .gallery-card:not(.gallery-card-tall):not(.gallery-card-wide):not(.gallery-card-large) .gallery-card-inner img {
     min-height: 220px;
   }
-  .lightbox-inner { max-height: 85vh; }
+  .lightbox-inner { width: 95vw; max-height: 85vh; }
   .lightbox-img { max-height: 60vh; }
+  .lightbox-video { max-height: 60vh; max-width: 95vw; }
   .lightbox-nav {
     width: 40px;
     height: 40px;

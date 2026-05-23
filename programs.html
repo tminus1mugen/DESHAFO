@@ -22,6 +22,44 @@
   <meta name="twitter:title" content="DESHAFO Programs" />
   <meta name="twitter:description" content="Education, mentorship, climate action, teen mother support, GRETECHI Conference, and community leadership in Homa Bay County." />
   <meta name="twitter:image" content="https://deshafo.org/assets/images/climm1.jpeg" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://deshafo.org/programs.html#webpage",
+        "url": "https://deshafo.org/programs.html",
+        "name": "DESHAFO Programs",
+        "description": "Explore DESHAFO programs in Homa Bay County: education and mentorship, climate action, teen mother reintegration, GRETECHI Conference, and community leadership.",
+        "inLanguage": "en",
+        "primaryImageOfPage": "https://deshafo.org/assets/images/climm1.jpeg",
+        "isPartOf": { "@id": "https://deshafo.org/#website" },
+        "about": { "@id": "https://deshafo.org/#organization" }
+      },
+      {
+        "@type": "ItemList",
+        "name": "DESHAFO Programs",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "item": { "@type": "Service", "name": "Education & Mentorship", "provider": { "@id": "https://deshafo.org/#organization" }, "areaServed": "Homa Bay County, Kenya" } },
+          { "@type": "ListItem", "position": 2, "item": { "@type": "Service", "name": "Climate Action", "provider": { "@id": "https://deshafo.org/#organization" }, "areaServed": "Homa Bay County, Kenya" } },
+          { "@type": "ListItem", "position": 3, "item": { "@type": "Service", "name": "Teen Mother Counselling & Reintegration", "provider": { "@id": "https://deshafo.org/#organization" }, "areaServed": "Homa Bay County, Kenya" } },
+          { "@type": "ListItem", "position": 4, "item": { "@type": "Event", "name": "The GRETECHI Conference", "organizer": { "@id": "https://deshafo.org/#organization" }, "location": { "@type": "Place", "name": "Homa Bay County, Kenya" }, "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode" } },
+          { "@type": "ListItem", "position": 5, "item": { "@type": "Service", "name": "Community Reach & Leadership Development", "provider": { "@id": "https://deshafo.org/#organization" }, "areaServed": "Homa Bay County, Kenya" } }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://deshafo.org/" },
+          { "@type": "ListItem", "position": 2, "name": "Programs", "item": "https://deshafo.org/programs.html" }
+        ]
+      }
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="css/style.css?v=20250426" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
@@ -113,29 +151,35 @@
     gap: 12px;
   }
   .program-detail ul li {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
+    position: relative;
     font-size: 0.95rem;
     color: var(--text-dark);
     line-height: 1.6;
     background: var(--white);
-    padding: 12px 16px;
+    padding: 12px 16px 12px 48px;
     border-radius: var(--radius-sm);
     border: 1px solid rgba(15,106,60,0.06);
     box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  }
+  .program-detail ul li strong {
+    display: block;
+    color: var(--green);
+    font-family: var(--font-head);
+    font-size: 1rem;
+    margin-bottom: 2px;
   }
   .program-detail ul li::before {
     content: '✓';
     color: var(--white);
     background: var(--green);
     width: 20px; height: 20px;
-    min-width: 20px;
-    display: flex; align-items: center; justify-content: center;
+    display: inline-flex; align-items: center; justify-content: center;
     border-radius: 50%;
     font-weight: 700;
     font-size: 0.7rem;
-    margin-top: 2px;
+    position: absolute;
+    left: 16px;
+    top: 14px;
   }
 
    @media (max-width: 768px) {
@@ -187,10 +231,17 @@
        gap: 10px;
      }
      .program-detail ul li {
-       padding: 10px 14px;
+       padding: 10px 14px 10px 44px;
        font-size: 0.9rem;
        line-height: 1.5;
        border-radius: 8px;
+     }
+     .program-detail ul li::before {
+       left: 14px;
+       top: 12px;
+     }
+     .program-detail ul li strong {
+       font-size: 0.95rem;
      }
    }
 
@@ -293,13 +344,13 @@
          <h2>Climate Action</h2>
          <p>Kenya's communities bear the brunt of climate change — from prolonged droughts in the drylands to flooding along Lake Victoria. DESHAFO's Climate Action program mobilizes youth and community members to become environmental stewards, addressing local climate challenges through practical, community-led initiatives that protect both people and ecosystems.</p>
          <ul>
-           <li><strong>Tree planting & reforestation</strong> — indigenous tree planting drives across Homabay County, focusing on watershed protection along Lake Victoria and school greening programs</li>
-           <li><strong>Climate education in schools</strong> — integrating climate literacy into CBC lessons, training student environmental clubs, and conducting climate awareness workshops in partnership with Kenya Metrological Department</li>
-           <li><strong>Sustainable agriculture & food security</strong> — teaching climate-smart farming techniques, organic kitchen gardening, drought-resistant crop cultivation, and water conservation methods for smallholder farmers</li>
-           <li><strong>Lake Victoria conservation</strong> — shoreline cleanups, protection of fish breeding grounds, and community campaigns against water pollution threatening the lake's ecosystem</li>
-           <li><strong>Youth-led climate campaigns</strong> — training young climate ambassadors to lead advocacy on climate justice, plastic waste reduction, and renewable energy adoption in local communities</li>
-           <li><strong>Integration into GRETECHI Conference</strong> — annual climate action workshops and environmental stewardship sessions reaching 300+ youth each August</li>
-           <li><strong>Collaboration with Kenya Forest Service & NEMA</strong> — partnering with government agencies to align with national climate goals and afforestation targets</li>
+           <li><strong>Tree planting & reforestation</strong>Indigenous tree planting drives across Homabay County, focusing on watershed protection along Lake Victoria and school greening programs.</li>
+           <li><strong>Climate education in schools</strong>Integrating climate literacy into CBC lessons, training student environmental clubs, and conducting climate awareness workshops in partnership with Kenya Metrological Department.</li>
+           <li><strong>Sustainable agriculture & food security</strong>Teaching climate-smart farming techniques, organic kitchen gardening, drought-resistant crop cultivation, and water conservation methods for smallholder farmers.</li>
+           <li><strong>Lake Victoria conservation</strong>Shoreline cleanups, protection of fish breeding grounds, and community campaigns against water pollution threatening the lake's ecosystem.</li>
+           <li><strong>Youth-led climate campaigns</strong>Training young climate ambassadors to lead advocacy on climate justice, plastic waste reduction, and renewable energy adoption in local communities.</li>
+           <li><strong>Integration into GRETECHI Conference</strong>Annual climate action workshops and environmental stewardship sessions reaching 300+ youth each August.</li>
+           <li><strong>Collaboration with Kenya Forest Service & NEMA</strong>Partnering with government agencies to align with national climate goals and afforestation targets.</li>
          </ul>
        </div>
     </div>
