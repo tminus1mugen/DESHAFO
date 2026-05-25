@@ -1786,12 +1786,8 @@ footer::before {
 
 .lightbox-video {
   display: block;
-  width: 100%;
-  max-width: min(90vw, 1200px);
-  height: auto;
-  max-height: 80vh;
-  object-fit: contain;
   background: #000;
+  object-fit: contain;
   border-radius: var(--radius-sm);
   box-shadow: 0 32px 80px rgba(0,0,0,0.5);
   margin: 0 auto;
@@ -1836,7 +1832,6 @@ footer::before {
   }
   .lightbox-inner { width: 95vw; max-height: 85vh; }
   .lightbox-img { max-height: 60vh; }
-  .lightbox-video { max-height: 60vh; max-width: 95vw; }
   .lightbox-nav {
     width: 40px;
     height: 40px;

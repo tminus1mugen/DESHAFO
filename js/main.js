@@ -455,7 +455,23 @@ window.openLightbox = function(id, title) {
     vid.controls = true;
     vid.autoplay = true;
     vid.playsInline = true;
+    vid.setAttribute('playsinline', '');
+    vid.setAttribute('webkit-playsinline', '');
     vid.className = 'lightbox-video';
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    vid.style.cssText = [
+      'display:block',
+      'width:' + (isMobile ? '92vw' : 'min(90vw, 1100px)'),
+      'max-width:' + (isMobile ? '92vw' : '1100px'),
+      'height:' + (isMobile ? '62vh' : '70vh'),
+      'max-height:' + (isMobile ? '62vh' : '70vh'),
+      'min-height:240px',
+      'background:#000',
+      'object-fit:contain',
+      'border-radius:8px',
+      'box-shadow:0 32px 80px rgba(0,0,0,0.5)',
+      'margin:0 auto'
+    ].join(';');
     inner.appendChild(vid);
   } else {
     const img = document.createElement('img');
